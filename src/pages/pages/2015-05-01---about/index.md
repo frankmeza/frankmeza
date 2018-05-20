@@ -4,10 +4,19 @@ layout: page
 path: "/about"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+I think of my self as a good-natured smart-ass; nonchalant with a touch of rowdy.  
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](./1.jpg)
+Just like you, I like stuff too. *Imagine that!* Besides writing code, I'm into:
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
-
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+- simplifying, organizing ideas, and decluttering stuff (all kinds of stuff)
+- trying not to take myself too seriously
+- spreading the gospel of yerba mate
+- jiujitsu
+- taking care of and stretching my body/joints 
+- taking a deep breathe, taking in the moment, and saying out loud, "Ahh, this is nice!"
+- planning my next overseas voyage (Portugal! I think, and soon!)
+- instrumental music from around the world
+- learning/speaking foreign languages (Indonesian, I'm looking at you)
+- sunshine and warm weather
+- eye contact, even with strangers (it doesn't have to be creepy, just smile)
+- different sorts of nerdy history stuff (I blame my college degree)
