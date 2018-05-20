@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
-    subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-    copyright: '© All rights reserved.',
+    url: 'https://frankmeza.github.io/',
+    title: 'Frank writes about code',
+    subtitle: 'React/React Native/Typescript Developer, Golang hobbyist, Jiu-jitsu player, foreign language aficionado',
+    copyright: 'MIT License',
     disqusShortname: '',
     menu: [
       {
@@ -20,11 +20,11 @@ module.exports = {
       }
     ],
     author: {
-      name: 'Git Doe',
-      email: '#',
+      name: 'Frank Meza',
+      email: 'frankmezapdx@gmail.com',
       telegram: '#',
-      twitter: '#',
-      github: '#',
+      twitter: 'https://twitter.com/frank_says_yeah',
+      github: 'https://github.com/frankmeza',
       rss: '#',
       vk: '#'
     }
@@ -99,9 +99,7 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 960
-            }
+            options: { maxWidth: 960 }
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
@@ -120,10 +118,8 @@ module.exports = {
       options: { trackingId: 'UA-73379983-2' }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto\:400,400i,500,700`]
-      }
+      resolve: 'gatsby-plugin-google-fonts',
+      options: { fonts: ['roboto:400,400i,500,700'] }
     },
     {
       resolve: 'gatsby-plugin-sitemap',
