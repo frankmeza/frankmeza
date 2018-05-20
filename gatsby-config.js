@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://frankmeza.github.io/',
     title: 'Frank writes about code',
-    subtitle: 'React/React Native/Typescript Developer, Golang hobbyist, jiu-jitsu player, foreign language aficionado',
+    subtitle: 'React/React Native/Typescript Developer, Golang hobbyist, jiujitsu player, foreign language aficionado',
     copyright: '© MIT License',
     disqusShortname: '',
     menu: [
@@ -13,18 +13,14 @@ module.exports = {
       {
         label: 'About me',
         path: '/about/'
-      },
-      {
-        label: 'Contact me',
-        path: '/contact/'
       }
     ],
     author: {
       name: 'Frank Meza',
-      email: 'frankmezapdx@gmail.com',
+      linkedin: 'frankmeza',
       telegram: 'frank_says_yeah',
-      twitter: 'https://twitter.com/frank_says_yeah',
-      github: 'https://github.com/frankmeza'
+      twitter: 'frank_says_yeah',
+      github: 'frankmeza'
     }
   },
   plugins: [
