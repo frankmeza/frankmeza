@@ -15,26 +15,27 @@ description: "Whether or not the knowing the hottest new JS framework is the cru
 
 # The scenario
 
-You got the interview. YES!! Yes, it's **that** job you **really** want. 
-
-Hold on, this is only step one. You still have to show up on time, know what the interviewers are asking you, demonstrate this knowledge clearly, smell good and maybe even smile a little bit before they grant you Github access to their greenfield codebase with all the newest new things you've been reading about at Hacker Noon between writing cover letters and filling out job applications.  
+You got the interview. YES!! Yes, it's **that** job you **really** want. Hold on, this is really only step one. You still have to show up on time, know what the interviewers are asking you, demonstrate this knowledge clearly, smell good and maybe even smile a little bit before they grant you Github access to their greenfield codebase with all the newest new things you've been reading about at Hacker Noon between writing cover letters and filling out job applications.  
 
 Okay, so now how to prep?
 
 ## Algorithms
 
-which algorithm to study? There's a lot on the internet about nightmare algorithm questions in a job interview, but I've not heard anyone I personally know ever have to do this. However, I don't see how this can hurt. If it does come up, it's generally less important to get an algorithm '100% right'than it is to thinking your way through it out loud to your interviewers.  
+There's a lot on the internet about nightmare algorithm questions in a job interview, but I've not heard anyone I personally know ever have to do this. However, I don't see how this can hurt. If it does come up, it's my general impression that it's less important to get an algorithm '100% right' than it is to thinking your way through it out loud to your interviewers, so that they can see how you think on your feet and under some slight pressure.  
 
-- Do you have a project to showcase? Awesome, this is good, be prepared to talk about the underlying concepts instead of tiny implementation details
-- which languages to put to the front of your knowledge? show, don't tell. If you're just entering the field, this is less applicable. Fear not - if in doubt, say something like "Given my current level of experience with code, I feel fairly comfortable with language X, but I'll let you be the judge by asking me any questions about the language, or using that language to talk through concepts in programming."
+## Personal Projects
 
- - when I began learning to code, it was in Ruby primarily.  
+Do you have a project to showcase? Awesome! This is great. You may be asked to diagram a certain operation flow of your project or explain more about large, underlying concepts instead of tiny implementation details.  
 
-My first job in development was at a Rails/Backbone/CoffeScript shop, which was great for me at the time. Because I didn't have to adjust to new syntax right away, I was able to continue my learning of writing object-oriented code within such a widely known MVC framework as Rails in one seemingly unending streak of Ruby classes, and Rails controllers and serializers.  
+## Language Diversity - Show, Don't Tell 
 
-Later, I began to read about the features and approaches of other languages and paradigms. Functional programming began to interest me quite a bit, and I began to see the advantages of typed languages. Although Ruby on Rails isn't really the best space to take advantage of these types of approaches, I was still able to take *full* advantage of the fundamental concepts that I picked up during all that time programming within a Ruby/Rails environment.  
+Which programming languages are you going to put at the front of your knowledge? If you're just entering the field and you're after your first or even second job, this is much less applicable. If this is you, fear not - if in doubt about your ability, say something like "Given my current level of experience with code, I feel fairly comfortable with {language_of_choice}, but I'll let you be the judge by asking me any questions about the language, or using that language to talk through concepts in programming." This is what your interviewers are going to do anyway, but this sort of open statement lets them know that you are not trying to puff up your knowledge by dodging questions.
 
-Eventually, I accepted an offer working with a small and tight team, whose primary stack is a mostly-functional approach to Typescript/React/React-Native/Go. This is obviously a very different tech stack than Rails/Backbone/CoffeeScript. However, I was able to leverage my experience with Ruby methods and objects and classes (as well as a few things in CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.  
+My first job in development was at a Rails/Backbone/CoffeScript shop, which was great for me at the time. When I began to learn programming, it was in Ruby. Because I didn't have to adjust to new syntax right away, I was able to continue my learning of writing object-oriented code within such a widely known MVC framework as Rails in one seemingly unending streak of Ruby classes, and Rails controllers and serializers.  
+
+Later, I grew an interest in both functional programming and typed languages. Although Ruby on Rails isn't really the best space to take advantage of these types of approaches, I was still able to take *full* advantage of the fundamental concepts that I picked up during all that time programming within a Ruby/Rails environment.  
+
+Shortly after, I began working with a small and tight team, whose primary stack is a mostly-functional and immutable approach to Typescript/React/React-Native/Go. This is obviously a very different tech stack than (mutable) object-oriented Rails/Backbone/CoffeeScript. However, I was able to leverage my experience with Ruby methods and objects and classes (as well as a few things in CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.  
 
 ## Think twice before going all-in on a single framework
 
@@ -42,9 +43,9 @@ Yes, the job posting may have mentioned so-many-years-experience in such-and-suc
 
 This is what potential employers want to know... *can you keep up?* Are you able to take the *concepts* of programming with you into any coding situation you may find yourself in, and only then focus on implementation/syntax?
 
-> Solid Pseudo code knows no single syntax.
+> Solid pseudo code knows no single syntax.
 
-How can you prove that you know this? with a clear explanation of the underlying mechanics, which can only come from having a solid grasp of basic concepts.
+How can you prove that you have a good, working knowledge of this? With clear explanation of the underlying mechanics, which can only come from having a solid grasp of basic concepts.
 
 ### What Are these "basic concepts?" 
 
@@ -103,6 +104,9 @@ read about HTTP in this [overview by Mozilla](https://developer.mozilla.org/en-U
 - const/let do not leave their block { }
 
 #### What is closure?
+https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6
+
+#### difference between parameters and arguments
 
 #### Call, bind, apply in JS
 
@@ -143,9 +147,18 @@ Function - name, params, body block
 
 ### Variable scope within and without blocks { }
 
-### Whiteboard- talk through all requirements, and pseudo code talk through your plan THEN begin coding.
+### The Big Scary Final Boss: The Whiteboard Session
 
-Ideally, You may be perceived as very knowledgeable, and not even have to finish the challenge depending on its length, as you've showcased what the interviewers *really* want to see in a potential new developer: an adaptable problem-solver with legitimate and valuable critical thinking skills.
-- the main goal here is to demonstrate that you have the mental tools to handle a specific problem, so a very slight amount of hand waviness is acceptable implementation wise as long as you sandwich this with very concrete and clear knowledge and explanation.
-- having said that, things like the syntax of loops in your preferred coding language, the difference of use of if-statements and ternary expressions, as well as concepts in error handling look very good in a potential new hire.
-- in summary, if you are asked to explain an approach to a problem or using a particular type of algorithm it's probably okay to gloss over syntax in this situation, as long as you are able to properly explain correct use of loops and statements and expressions when that question is the primary matter.
+Software developers are problem solvers, essentially by definition. If you are hired after the interview, you will be paid for solving problems. Thus, I believe that it is fully acceptable to ask a job applicant to solve a problem in the interview. This part of the interview may happen, it may not. I've personally been in both scenarios. The main goal here is to demonstrate that you have the mental tools to handle a specific problem, so a very slight amount of glossing over the smaller details of actual implementation, as long as you sandwich this with very concrete and clear knowledge and explanation.  
+
+Having said that, being able to clearly explain and summarize things like loop syntax in your preferred coding language, the difference of use of if-statements and ternary expressions, as well as concepts in error handling look *very good* in a potential new hire.  
+
+1. Talk through all requirements, asking questions for two reasons,
+    - to become more clear with what you are actually being asked to do, and
+    - to demonstrate the extent of your thoughts and show where your mind goes.  
+
+2. Thinking out loud, begin talking and explaining your way through your plan. You may find that you have more questions as you go along. This is good. You can also begin to write or outline some pseudo code as a mental save point to return to once you are completely clear on both the requirements and your plan of attack.
+
+3. Finally, you may begin coding. If steps 1 and 2 have fallen into place correctly, then this step may actually be the easiest of the three.
+
+Ideally, you will be perceived as very knowledgeable, and not even have to finish the challenge depending on its length, as you've showcased what the interviewers **really** want to see in a potential new developer: an adaptable problem-solver with legitimate and valuable critical thinking skills. 
