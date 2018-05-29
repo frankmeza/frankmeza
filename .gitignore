@@ -5,5 +5,14 @@ npm-debug.log
 .eslintcache
 .gatsby-context.js
 .idea
+path---*.js
+path---*.js.map
+*.png
+*.jpg
+*.html
+sw.js
+*.woff*
+*.ttf
+*.eot
 gatsby-starter-lumen.iml
 yarn.lock
