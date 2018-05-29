@@ -36,6 +36,15 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Roboto',
+          'Source Sans Pro:300,400,400i,700' // you can also specify font weights and styles
+        ]
+      }
+    },
+    {
       resolve: 'gatsby-plugin-feed',
       options: {
         query: `
