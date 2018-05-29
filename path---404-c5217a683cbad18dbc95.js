@@ -1,0 +1,2 @@
+webpackJsonp([0xe70826b53c04],{392:function(a,e){a.exports={data:{site:{siteMetadata:{title:"Frank writes about code",subtitle:"React/React Native/Typescript Developer, Golang hobbyist, jiujitsu player, foreign language aficionado",copyright:"© MIT License",menu:[{label:"Articles",path:"/"},{label:"About me",path:"/about/"}],author:{name:"Frank Meza",telegram:"frank_says_yeah",twitter:"frank_says_yeah",github:"frankmeza"}}}},pathContext:{}}}});
+//# sourceMappingURL=path---404-c5217a683cbad18dbc95.js.map
