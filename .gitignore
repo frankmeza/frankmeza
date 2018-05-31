@@ -16,4 +16,5 @@ path---*.js.map
 *.ttf
 *.xml
 sw.js
+yarn-error.log
 yarn.lock
