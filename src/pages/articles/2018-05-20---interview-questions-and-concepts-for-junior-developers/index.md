@@ -47,34 +47,45 @@ This is what potential employers want to know... *can you keep up?* Are you able
 
 How can you prove that you have a good, working knowledge of this? With clear explanation of the underlying mechanics, which can only come from having a solid grasp of basic concepts.
 
-## What Are these "basic concepts?" 
+## What Are these "basic concepts?"
+
+I really like the overviews over at Mozilla. Check these overviews out and use them as a jump off point to become very familiar with these topics.
 
 ### REST
 
 *RE*presentational *S*tate *T*ransfer
-read about HTTP in this [overview by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-### HTTP
-- https://developer.mozilla.org/en-US/docs/Web/HTTP
-- the protocol itself - hypertext transfer protocol.
 
-- it might sound slightly archaic to need to know this, but in no way is this true. It's always a good idea to know how your tools work. That knowledge is key to going beyond them when you have to, in a given situation.  
+Read about REST [overview by Mozilla][1:rest]
 
-#### client, server relationship - 
-- requests, responses, codes, body, et c.
+### HyperText Transfer Protocol: HTTP
+
+Mozilla on [the protocol itself][2:http] - hypertext transfer protocol.
+
+It might sound slightly archaic to need to know this, but in no way is this true. If you think that this can be glossed over, than you are really in need of a thorough review of this material. It's always a good idea to know how your tools work. That knowledge is key to going beyond them when you have to, in a given situation.  
+
+Learn about:
+- the client-server relationship
+- requests, responses, codes, body, headers
+- authentication
 
 ### What are the clients that will use server data?
-- web browser, mobile device
-- what will the client do with the data?
-    - render it through html/jsx markup
+
+- the web browser, mobile devices
+- what will these clients do with the data?
+    - render through html/jsx markup
 - Types of server data - XML, JSON, HTML
 
-#### verbs 
-- there are many but GET, POST, PUT, (PATCH), and DELETE are the most commonly used
-- Parts of a response from http verb https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
-    - headers, body, json format
-    - authentication from where?
-- explain difference between JSON and Javascript Object, keys and values
-- other data
+#### HTTP Verbs 
+
+Mozilla on [HTTP Verbs][3:http-verbs]  
+
+Learn about:
+- the verbs themselves: 
+    - here are many but GET, POST, PUT, PATCH, and DELETE are the most commonly used
+- parts of a response from http verb 
+
+Slightly aside, but still related:
+- Explain difference between JSON and Javascript Object, keys and values. hint: One is a string format to send and receive Javascript objects.
 
 #### Status codes http 
 - 2XX Success
@@ -104,7 +115,8 @@ read about HTTP in this [overview by Mozilla](https://developer.mozilla.org/en-U
 - const/let do not leave their block { }
 
 #### What is closure?
-https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6
+
+Essentially a closure is this: imagine a function that lives inside another function. That's it. But [read this][4:closure] for a much more detailed explanation. Pay attention most to the ideas of scope and work out for yourself who has access to what values and why.
 
 #### difference between parameters and arguments
 
@@ -165,3 +177,8 @@ Having said that, being able to clearly explain and summarize things like loop s
 3. Finally, you may begin coding. If steps 1 and 2 have fallen into place correctly, then this step may actually be the easiest of the three.
 
 Ideally, you will be perceived as very knowledgeable, and not even have to finish the challenge depending on its length, as you've showcased what the interviewers **really** want to see in a potential new developer: an adaptable problem-solver with legitimate and valuable critical thinking skills. 
+
+[1:rest]: (https://developer.mozilla.org/en-US/docs/Glossary/REST)
+[2:http]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+[3:http-verbs]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+[4:closure]: (https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6)
