@@ -16,13 +16,13 @@ Stardate 05/30/2018 :: I don't know why I find cryptography quite so fascinating
 
 Learning about it so far, and beginning to wonder to myself just what Alice and Bob need so much secrecy for feels like this:
 
-#### H4X0RLMAO
+#### H4X0R_LMAO
 
 <img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif" width="350" />
 
 <hr>
 
-...and telling your friends about your new interest in hash functions, symmetric and assymetric keys, and all other things cryptographic makes you me feel like this sometimes: 
+...and telling your friends about your new interest in hash functions, symmetric and assymetric keys, and all other things cryptographic will make them think of you like this: 
 
 #### HACKED!
 
