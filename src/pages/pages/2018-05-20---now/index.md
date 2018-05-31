@@ -6,11 +6,11 @@ path: "/now"
 
 # What I'm into right now
 
-Stardate 05/30/18 :: I don't know why I find cryptography quite so fascinating, but I do. I do laugh to myself that it could lead to this:
+Stardate 05/30/2018 :: I don't know why I find cryptography quite so fascinating, but I do. I do laugh to myself that it could lead to this:
 
-#### MERKED
+#### MERKED HARD
 
-<img src="https://media.giphy.com/media/yK3PyRmUj0T3W/giphy.gif" width="350" height="300" />
+<img src="https://media.giphy.com/media/yK3PyRmUj0T3W/giphy.gif" width="350" />
 
 <hr>
 
@@ -18,7 +18,7 @@ Learning about it so far, and beginning to wonder to myself just what Alice and 
 
 #### H4X0RLMAO
 
-<img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif" width="350" height="300" />
+<img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif" width="350" />
 
 <hr>
 
@@ -26,7 +26,7 @@ Learning about it so far, and beginning to wonder to myself just what Alice and 
 
 #### HACKED!
 
-<img src="https://media.giphy.com/media/eCqFYAVjjDksg/giphy.gif" width="350" height="300" />
+<img src="https://media.giphy.com/media/eCqFYAVjjDksg/giphy.gif" width="350" />
 
 Oh well, such is the #nerdLife.
 
