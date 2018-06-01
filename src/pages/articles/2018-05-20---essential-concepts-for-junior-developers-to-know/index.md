@@ -1,5 +1,5 @@
 ---
-title: Interview Questions and Concepts for Junior Developers
+title: Essential Concepts for Junior Developers to Know
 date: "2018-05-20T00:00:00.0Z"
 layout: post
 draft: false
