@@ -13,49 +13,34 @@ tags:
 description: "Whether or not the knowing the hottest new JS framework is the crux of winning the interview, there are some very fundamental concepts in web development that employers and senior devs want their juniors to have a solid grasp of."
 ---
 
-# The scenario
+# You got the interview.
 
-You got the interview. YES!! Yes, it's **that** job you **really** want. Hold on, this is really only step one. You still have to show up on time, know what the interviewers are asking you, demonstrate this knowledge clearly, smell good and maybe even smile a little bit before they grant you Github access to their greenfield codebase with all the newest new things you've been reading about at Hacker Noon between writing cover letters and filling out job applications.  
+ YES!! Yes, it's that job you **really** want. Hold on, this is really only step one. You still have to show up on time, know what the interviewers are asking you, demonstrate this knowledge clearly, smell good and maybe even smile a little bit before they grant you Github access to their greenfield codebase with all the newest new things you've been reading about at Hacker Noon between writing cover letters and filling out job applications.  
 
-Okay, so now how to prep?  
+Okay, so now how to prep? What to study? 
 
-## Personal Projects
-
-Do you have a project to showcase? Awesome! This is great. You may be asked to diagram a certain operation flow of your project or explain more about large, underlying concepts instead of tiny implementation details. You may be asked questions about your project that you don't understand. This is fine, it's just your interviewers seeing how deep into the tech stack you were able to get into. If you understand part of the question, feel free to ask for more clarification. It may turn out that you actually *do* know the answer to the question (yay!), and that your initial confusion was related to terminology you are not familiar with just yet.   
-
-## Diversity of Knowledge - Show, Don't Tell 
-
-Which programming languages are you going to put at the front of your knowledge? If you're just entering the field and you're after your first or even second job, fear not - if in doubt about your ability, say something like 
-
-> "Given my current level of experience with code, I feel fairly comfortable with {language\_of\_choice}, but I'll let you be the judge by asking me any questions about the language, or using that language to talk through general concepts in programming."  
-
-This is what your interviewers are going to do anyway, but this sort of open statement lets them know that you are not trying to puff up your knowledge by dodging questions.
-
-My first job in development was at a Rails/Backbone/CoffeScript shop, which was great for me at the time. When I began to learn programming, it was in Ruby. Because I didn't have to adjust to new syntax right away, I was able to continue my learning of writing object-oriented code within such a widely known MVC framework as Rails in one seemingly unending streak of Ruby classes, and Rails controllers and serializers.  
-
-Later, I grew an interest in both functional programming and typed languages. Although Ruby on Rails isn't really the best space to take advantage of these types of approaches, I was still able to take *full* advantage of the fundamental concepts that I picked up during all that time programming within a Ruby/Rails environment.  
-
-Shortly after, I began working with a new team, whose primary stack is a mostly-functional and immutable approach to Typescript/React/React-Native/Go. This is obviously a very different tech stack than (mutable) object-oriented Rails/Backbone/CoffeeScript. However, I was able to leverage my experience with Ruby methods and objects and classes (as well as a few things in CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.  
-
-## Think twice before going all-in on a single framework
+## Focus beyond the framework
 
 Yes, the job posting may have mentioned so-many-years-experience in such-and-such a framework, but we all know that frameworks serve different purposes in different types of businesses, and also go in and out of use. The question becomes more like *can you learn to work with a new one?*  
 
 This is what potential employers want to know... *can you keep up?* Are you able to take the *concepts* of programming with you into any coding situation you may find yourself in, and only then focus on implementation/syntax?
 
-> Solid pseudo code knows no single syntax.
+> Solid pseudo code knows no single syntax or Javascript framework.
+
+What I mean by that is that armed with fundamental knowledge of programming and protocols and concepts, and by using that as your knowledge base, you can learn any framework or language exponentially quicker than by thinking that each must be learned on its own special snowflake terms.  
 
 How can you prove that you have a good, working knowledge of this? With clear explanation of the underlying mechanics, which can only come from having a solid grasp of basic concepts.
 
 ## What Are these "basic concepts?"
 
-I really like the overviews over at Mozilla. Check these overviews out and use them as a jump off point to become very familiar with these topics.
+I really like the overviews over at Mozilla. They're thorough, clear, and have diagrams to help break up the content and provide some visuals to use in clarifying the point at hand. Check these overviews out and use them as a jump off point to become very familiar with these topics.
 
 ### REST
 
-*RE*presentational *S*tate *T*ransfer
+*RE*presentational *S*tate *T*ransfer is the *de facto* standard of communication over the internet. It's a pretty big deal, you know?
+Check out the Wikipedia article on [REST][wiki:rest] for a very high level overview
 
-Read about REST [overview by Mozilla][1:rest]
+Read about REST [overview by Mozilla][mozilla:rest]
 
 ### HyperText Transfer Protocol: HTTP
 
@@ -126,11 +111,32 @@ Essentially a closure is this: imagine a function that lives inside another func
 - Key/values
 - Usually string as key, but what else can be used as a key?
 
+
+## Personal Projects
+
+Do you have a project to showcase? Awesome! This is great. You may be asked to diagram a certain operation flow of your project or explain more about large, underlying concepts instead of tiny implementation details. You may be asked questions about your project that you don't understand. This is fine, it's just your interviewers seeing how deep into the tech stack you were able to get into. If you understand part of the question, feel free to ask for more clarification. It may turn out that you actually *do* know the answer to the question (yay!), and that your initial confusion was related to terminology you are not familiar with just yet.   
+
+## Diversity of Knowledge - Show, Don't Tell 
+
+Which programming languages are you going to put at the front of your knowledge? If you're just entering the field and you're after your first or even second job, fear not - if in doubt about your ability, say something like 
+
+> "Given my current level of experience with code, I feel fairly comfortable with {language\_of\_choice}, but I'll let you be the judge by asking me any questions about the language, or using that language to talk through general concepts in programming."  
+
+This is what your interviewers are going to do anyway, but this sort of open statement lets them know that you are not trying to puff up your knowledge by dodging questions.
+
+My first job in development was at a Rails/Backbone/CoffeScript shop, which was great for me at the time. When I began to learn programming, it was in Ruby. Because I didn't have to adjust to new syntax right away, I was able to continue my learning of writing object-oriented code within such a widely known MVC framework as Rails in one seemingly unending streak of Ruby classes, and Rails controllers and serializers.  
+
+Later, I grew an interest in both functional programming and typed languages. Although Ruby on Rails isn't really the best space to take advantage of these types of approaches, I was still able to take *full* advantage of the fundamental concepts that I picked up during all that time programming within a Ruby/Rails environment.  
+
+Shortly after, I began working with a new team, whose primary stack is a mostly-functional and immutable approach to Typescript/React/React-Native/Go. This is obviously a very different tech stack than (mutable) object-oriented Rails/Backbone/CoffeeScript. However, I was able to leverage my experience with Ruby methods and objects and classes (as well as a few things in CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.  
+
+## Think twice before going all-in on a single framework
+
 ### Technical part of interview/whiteboarding
 
 - Whiteboard - small algorithm - input int, output string of square
 
-```
+``` javascript
 const square = (input) {
     const line = "";
     for (let i = 0; i >= input; i++) {
@@ -178,7 +184,8 @@ Having said that, being able to clearly explain and summarize things like loop s
 
 Ideally, you will be perceived as very knowledgeable, and not even have to finish the challenge depending on its length, as you've showcased what the interviewers **really** want to see in a potential new developer: an adaptable problem-solver with legitimate and valuable critical thinking skills. 
 
-[1:rest]: (https://developer.mozilla.org/en-US/docs/Glossary/REST)
+[wiki:rest]: (https://en.wikipedia.org/wiki/Representational_state_transfer)
+[mozilla:rest]: (https://developer.mozilla.org/en-US/docs/Glossary/REST)
 [2:http]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 [3:http-verbs]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 [4:closure]: (https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6)
