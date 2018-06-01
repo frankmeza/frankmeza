@@ -3,7 +3,7 @@ title: Essential Concepts for Junior Developers to Know
 date: "2018-05-20T00:00:00.0Z"
 layout: post
 draft: false
-path: "/posts/interview-questions-and-concepts-for-junior-developers/"
+path: "/posts/essential-concepts-for-junior-developers-to-know/"
 category: "web development"
 tags:
   - "web development"
@@ -15,9 +15,15 @@ description: "Whether or not the knowing the hottest new JS framework is the cru
 
 # You got the interview.
 
- YES!! Yes, it's that job you **really** want. Hold on, this is really only step one. You still have to show up on time, know what the interviewers are asking you, demonstrate this knowledge clearly, smell good and maybe even smile a little bit before they grant you Github access to their greenfield codebase with all the newest new things you've been reading about at Hacker Noon between writing cover letters and filling out job applications.  
+YES!! Yes, it's that job you **really** want. But hold on, this only *looks* like step one towards landing a new job in web development.  
+
+You still have to show up on time, know what the interviewers are asking you, demonstrate this knowledge clearly, smell good and maybe even smile a little bit before they grant you Github access to their greenfield codebase with all the newest new things you've been reading about at Hacker Noon between writing cover letters and filling out job applications.  
+
+But before all that, you have to know the material: the terminology, the work flows, the protocols, all that stuff.  
 
 Okay, so now how to prep? What to study? 
+
+<hr>
 
 ## Focus beyond the framework
 
@@ -29,22 +35,25 @@ This is what potential employers want to know... *can you keep up?* Are you able
 
 What I mean by that is that armed with fundamental knowledge of programming and protocols and concepts, and by using that as your knowledge base, you can learn any framework or language exponentially quicker than by thinking that each must be learned on its own special snowflake terms.  
 
-How can you prove that you have a good, working knowledge of this? With clear explanation of the underlying mechanics, which can only come from having a solid grasp of basic concepts.
+How can you prove that you have a good, working knowledge of this? With clear explanation of the underlying mechanics, which can only come from having a solid grasp of basic concepts.  
+
+<hr>
 
 ## What Are these "basic concepts?"
 
 I really like the overviews over at Mozilla. They're thorough, clear, and have diagrams to help break up the content and provide some visuals to use in clarifying the point at hand. Check these overviews out and use them as a jump off point to become very familiar with these topics.
 
-### REST
+### REST: Representational State Transfer
 
-*RE*presentational *S*tate *T*ransfer is the *de facto* standard of communication over the internet. It's a pretty big deal, you know?
-Check out the Wikipedia article on [REST][wiki:rest] for a very high level overview
+REST is the *de facto* standard of communication over the internet. It's a pretty big deal, you know?  
 
-Read about REST [overview by Mozilla][mozilla:rest]
+Check out the Wikipedia article on [REST][wiki:rest] for a very high level overview on REST, and then move over to this [overview by Mozilla][mozilla:rest].
 
-### HyperText Transfer Protocol: HTTP
+### HTTP/HTTPS: HyperText Transfer Protocol
 
-Mozilla on [the protocol itself][2:http] - hypertext transfer protocol.
+Wikipedia overview: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+Mozilla on [the protocol itself][mozilla:http] - hypertext transfer protocol.
 
 It might sound slightly archaic to need to know this, but in no way is this true. If you think that this can be glossed over, than you are really in need of a thorough review of this material. It's always a good idea to know how your tools work. That knowledge is key to going beyond them when you have to, in a given situation.  
 
@@ -62,7 +71,7 @@ Learn about:
 
 #### HTTP Verbs 
 
-Mozilla on [HTTP Verbs][3:http-verbs]  
+Mozilla on [HTTP Verbs][mozilla:http-verbs]  
 
 Learn about:
 - the verbs themselves: 
@@ -72,10 +81,16 @@ Learn about:
 Slightly aside, but still related:
 - Explain difference between JSON and Javascript Object, keys and values. hint: One is a string format to send and receive Javascript objects.
 
-#### Status codes http 
-- 2XX Success
-- know the differences between 200, 201, 204
-- 3XX Redirected
+#### HTTP Status Codes
+
+Very high level overview here at [Wikipedia][wiki:http-status-codes]
+
+Status codes between 200-299 usually indicate a success of some kind. The most frequently seen are 
+- 200 SUCCESS
+- 201 CREATED
+- 204 NO_CONTENT
+
+Status codes between 300-399 usually indicate a success of some kind. The most frequently seen are 
 - maybe know 302 and 304? don't come up too often
 - 4XX Failure
 - know 400, 401, 402, 403, 404, 422
@@ -101,7 +116,7 @@ Slightly aside, but still related:
 
 #### What is closure?
 
-Essentially a closure is this: imagine a function that lives inside another function. That's it. But [read this][4:closure] for a much more detailed explanation. Pay attention most to the ideas of scope and work out for yourself who has access to what values and why.
+Essentially a closure is this: imagine a function that lives inside another function. That's it. But [read this][medium:closure] for a much more detailed explanation. Pay attention most to the ideas of scope and work out for yourself who has access to what values and why.
 
 #### difference between parameters and arguments
 
@@ -184,8 +199,11 @@ Having said that, being able to clearly explain and summarize things like loop s
 
 Ideally, you will be perceived as very knowledgeable, and not even have to finish the challenge depending on its length, as you've showcased what the interviewers **really** want to see in a potential new developer: an adaptable problem-solver with legitimate and valuable critical thinking skills. 
 
-[wiki:rest]: (https://en.wikipedia.org/wiki/Representational_state_transfer)
+[medium:closure]: (https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6)
+
 [mozilla:rest]: (https://developer.mozilla.org/en-US/docs/Glossary/REST)
-[2:http]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-[3:http-verbs]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-[4:closure]: (https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6)
+[mozilla:http]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+[mozilla:http-verbs]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
+[wiki:rest]: (https://en.wikipedia.org/wiki/Representational_state_transfer)
+[wiki:http-status-codes]: (https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
