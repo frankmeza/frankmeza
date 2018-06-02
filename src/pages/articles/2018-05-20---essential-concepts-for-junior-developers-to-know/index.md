@@ -13,7 +13,7 @@ tags:
 description: "Whether or not the knowing the hottest new JS framework is the crux of winning the interview, there are some very fundamental concepts in web development that employers and senior devs want their juniors to have a solid grasp of."
 ---
 
-# You got the interview.
+# You got the interview. BAM!
 
 YES!! Yes, it's that job you **really** want. But hold on, this only *looks* like step one towards landing a new job in web development.  
 
@@ -25,7 +25,7 @@ Okay, so now how to prep? What to study?
 
 <hr>
 
-## Focus beyond the framework
+## ## Focus beyond the framework
 
 Yes, the job posting may have mentioned so-many-years-experience in such-and-such a framework, but we all know that frameworks serve different purposes in different types of businesses, and also go in and out of use. The question becomes more like *can you learn to work with a new one?*  
 
@@ -39,37 +39,37 @@ How can you prove that you have a good, working knowledge of this? With clear ex
 
 <hr>
 
-## What Are these "basic concepts?"
+## ## What Are These Basic Concepts?
 
-I really like the overviews over at Mozilla. They're thorough, clear, and have diagrams to help break up the content and provide some visuals to use in clarifying the point at hand. Check these overviews out and use them as a jump off point to become very familiar with these topics.
+When in the dark about a topic, I like to start at Wikipedia. You can quickly gain a 30,000 ft. overview and some terminology for better words to input into the Google. I also really like the overviews over at Mozilla. They're thorough, clear, and have diagrams to help break up the content and provide some visuals to use in clarifying the point at hand. Check these overviews out and use them as a jump off point to become very familiar with these topics.
 
-### REST: Representational State Transfer
+### ### REST: Representational State Transfer
 
 REST is the *de facto* standard of communication over the internet. It's a pretty big deal, you know?  
 
 Check out the Wikipedia article on [REST][wiki:rest] for a very high level overview on REST, and then move over to this [overview by Mozilla][mozilla:rest].
 
-### HTTP/HTTPS: HyperText Transfer Protocol
+### ### HTTP/HTTPS: HyperText Transfer Protocol
 
-Wikipedia overview: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+It might sound slightly archaic or overly tedious to need to know this, but in NO way is this true. If you think that this can be glossed over, than you are really in need of a thorough review of this material.  
 
-Mozilla on [the protocol itself][mozilla:http] - hypertext transfer protocol.
+It's ALWAYS a good idea to know how your tools work. That knowledge is key to going beyond them when you have to, in a given situation.  
 
-It might sound slightly archaic to need to know this, but in no way is this true. If you think that this can be glossed over, than you are really in need of a thorough review of this material. It's always a good idea to know how your tools work. That knowledge is key to going beyond them when you have to, in a given situation.  
+Again, skim over the [Wikipedia overview][wiki:http] and then move over to [Mozilla][mozilla:http] for a deeper dive.
 
-Learn about:
+> ### #### Questions to Answer, Topics to Explore within HTTP
+
 - the client-server relationship
-- requests, responses, codes, body, headers
-- authentication
-
-### What are the clients that will use server data?
-
-- the web browser, mobile devices
+    - what/who are the clients that will use server data? 
+        - web browsers, mobile devices
 - what will these clients do with the data?
-    - render through html/jsx markup
-- Types of server data - XML, JSON, HTML
+    - render the data through HTML/JSX markup
+- types of server data - XML, JSON, HTML
+- requests, responses, status codes, body, headers, HTTP verbs
+- authentication 
+    - initially, knowing this inside-out will be less important than the other elements here
 
-#### HTTP Verbs 
+### #### HTTP Verbs 
 
 Mozilla on [HTTP Verbs][mozilla:http-verbs]  
 
@@ -81,7 +81,7 @@ Learn about:
 Slightly aside, but still related:
 - Explain difference between JSON and Javascript Object, keys and values. hint: One is a string format to send and receive Javascript objects.
 
-#### HTTP Status Codes
+##### HTTP Status Codes
 
 Very high level overview here at [Wikipedia][wiki:http-status-codes]
 
@@ -98,6 +98,8 @@ Status codes between 300-399 usually indicate a success of some kind. The most f
 - maybe 500, 501, 504
 
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+
+<hr>
 
 ### Okay so now let's return to which Languages, frameworks do you know and work with? Rate yourself 1-10
 
@@ -205,5 +207,6 @@ Ideally, you will be perceived as very knowledgeable, and not even have to finis
 [mozilla:http]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 [mozilla:http-verbs]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 
+[wiki:http]: (https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 [wiki:rest]: (https://en.wikipedia.org/wiki/Representational_state_transfer)
 [wiki:http-status-codes]: (https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
