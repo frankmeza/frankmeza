@@ -147,11 +147,9 @@ Do you have a project to showcase? Awesome! This is great. You may be asked to d
 
 ## My Personal Experience
 
-My first job in development was at a Rails/Backbone/CoffeScript shop, which was great for me at the time. When I began to learn programming, it was in Ruby. Because I didn't have to adjust to new syntax right away, I was able to continue my learning of writing object-oriented code within such a widely known MVC framework as Rails in one seemingly unending streak of Ruby classes, and Rails controllers and serializers.  
+My own timeline of tech stacks has varied from Rails/Backbone/Coffeescript to React Native/Redux/Typescript. Learning to code with Ruby and a more object-oriented approach to programming had given way to using typed Javascript and a functional style.  
 
-Later, I grew an interest in both functional programming and typed languages. Although Ruby on Rails isn't really the best space to take advantage of these types of approaches, I was still able to take *full* advantage of the fundamental concepts that I picked up during all that time programming within a Ruby/Rails environment.  
-
-Shortly after, I began working with a new team, whose primary stack is a mostly-functional and immutable approach to Typescript/React/React-Native/Go. This is obviously a very different tech stack than (mutable) object-oriented Rails/Backbone/CoffeeScript. However, I was able to leverage my experience with Ruby methods and objects and classes (as well as a few things in CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.  
+However, I was able to leverage my experience and understanding of Ruby methods and objects and classes (as well as a few things in the local style of CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.  
 
 ### The Big Scary Final Boss: The Whiteboard Session Algorithm
 
