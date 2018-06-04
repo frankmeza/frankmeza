@@ -112,7 +112,7 @@ Which programming languages are you going to put at the front of your knowledge?
 
 > "Given my current level of experience with writing code, I feel do fairly comfortable with {language\_of\_choice}, but I'll let you be the judge by asking me any questions about the language, or using that language to talk through general concepts in programming."  
 
-This is what your interviewers are going to do anyway, but this sort of open statement lets them know that you are not trying to falsely puff up your knowledge by dodging questions.
+This is what your interviewers are going to do anyway, but this sort of open statement lets them know that you are not trying to falsely puff up your knowledge here.
 
 ## Be Very Familiar with Javascript
 
