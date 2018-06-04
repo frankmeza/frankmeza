@@ -145,11 +145,11 @@ This area can be a bit murky at times, but this is essential knowledge for new d
 
 Do you have a project to showcase? Awesome! This is great. You may be asked to diagram a certain operation flow of your project or explain more about large, underlying concepts instead of tiny implementation details. You may be asked questions about your project that you don't understand. This is fine, it's just your interviewers seeing how deep into the tech stack you were able to get into. If you understand part of the question, feel free to ask for more clarification. It may turn out that you actually *do* know the answer to the question (yay!), and that your initial confusion was related to terminology you are not familiar with just yet.   
 
-### My Personal Experience of 
+### My Personal Experience of Leveraging Fundamental Concepts Across Different Code Styles
 
 My own timeline of tech stacks has varied from Rails/Backbone/Coffeescript to React Native/Redux/Typescript. Learning to code with Ruby and a more object-oriented approach to programming had given way to using typed Javascript and a functional style.  
 
-However, I was able to leverage my experience and fairly solid understanding of Ruby methods and objects and classes (as well as a few things in the local style of CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.    
+However, I was able to take advantage of my experience and fairly solid understanding of Ruby methods and objects and classes (as well as a few things in the local style of CoffeeScript) to learning to code using Javascript's functional parts: *map*, *filter*, and *reduce* among them, as well as newer ES6 features such as the spread operator and fat arrow functions.    
 
 ### The Big Scary Final Boss: The Whiteboard Session Algorithm
 
