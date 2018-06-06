@@ -1,6 +1,6 @@
 ---
 title: Essential Concepts for Junior Developers to Know
-date: "2018-05-20T00:00:00.0Z"
+date: "2018-06-05T00:00:00.0Z"
 layout: post
 draft: false
 path: "/posts/essential-concepts-for-junior-developers-to-know/"
