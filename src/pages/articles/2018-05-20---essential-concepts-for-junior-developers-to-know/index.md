@@ -29,23 +29,23 @@ Okay, so now how to prep? What to study?
 
 Yes, the job posting may have mentioned so-many-years-experience in such-and-such a framework, but we all know that frameworks serve different purposes in different types of businesses, and also go in and out of use. The question becomes more like *can you learn to work with a new one?*  
 
-This is what potential employers want to know... *can you keep up?* Are you able to take the *concepts* of programming with you into any coding situation you may find yourself in, and only then focus on implementation/syntax?
+This is what potential employers want to know... *can you keep up?* Are you able to take the *fundamental concepts* of programming with you into any coding situation you may find yourself in, sort out an approach, and only *then* focus on implementation/syntax?
 
 > Solid pseudo code knows no single syntax or Javascript framework.
 
-What I mean by that is that armed with fundamental knowledge of programming and protocols and concepts, and by using that as your knowledge base, you can learn any framework or language exponentially quicker than by thinking that each must be learned on its own special snowflake terms.  
+What I mean by that is that armed with fundamental knowledge of programming and protocols and concepts and by using them as your knowledge base, you can learn any framework or language exponentially quicker than by believing and acting as if each must be learned on its own special snowflake terms.
 
-How can you prove that you have a good, working knowledge of this? With clear explanation of the underlying mechanics, which can only come from having a solid grasp of basic concepts.  
+How can you prove that you have a good, working knowledge of this? With clear explanations of the underlying mechanics, which can only come from having a solid grasp of basic concepts.  
 
 <hr>
 
 ## What Are These Basic Concepts?
 
-When in the dark about a topic, I like to start at Wikipedia. You can quickly gain a 30,000 ft. overview and some terminology for better words to input into the Google.  
+When in the dark about a lower level topic, I like to start at Wikipedia. You can quickly gain a 30,000 ft. overview and some terminology for better words to input into the Google.  
 
 I also really like the overviews over at Mozilla. They're thorough, clear, and have diagrams to help break up the content and provide some visuals to use in clarifying the point at hand. Check these overviews out and use them as a jump off point to become very familiar with these topics.  
 
-I'm not going to get into too much detail myself here, this is more an aggregation of links and small checklists to things to really dig into.
+I'm not going to get into too much detail myself here, this is more an aggregation of links and small checklists of things for you to really dig into as a new, maturing developer.
 
 ## REST: Representational State Transfer
 
@@ -68,7 +68,7 @@ Be able to explain in some detail these ideas and concepts:
 - what will these clients do with the data?
 - types of server data - XML, JSON, HTML
 - HTTP requests, HTTP responses: status codes, body, headers
-- the high level ideas behind [authentication][mozilla:authentication]
+- for bonus points: the high level ideas behind [authentication][mozilla:authentication]
 
 ### HTTP Verbs
 
@@ -104,13 +104,15 @@ Status codes between 500-599 indicate some kind of SERVER error response. Beyond
 
 <hr>
 
-## Okay Now We Can Return to Writing Code
+## Okay Now We Can Return to Code
 
-Now that we've covered some of the fundamentals, let's get into writing code. Be prepared to elaborate on which languages and frameworks you have worked with. You may be asked to rate yourself 1-10 in each, with 1 being 'What is Javascript?' and 10 being Brendan Eich.  
+Now that we've covered some of the fundamentals, let's get into writing and talking about code. Be prepared to elaborate on which languages and frameworks you have worked with. You may be asked to rate yourself 1-10 in each, with 1 being you asking 'What is Javascript?' and 10 being the sole property of Brendan Eich. Let's assume that an average newly-hired-at-my-first-job developer is at about a 3/4, *possibly* a 5 with one language or framework. This is fine, better not to try to over-inflate yourself or your "knowledge" too much. I once asked a kindergartner, "What do you know, David?", to which he answered "everything." I then asked him what he was supposed to be doing at that moment (he was supposed to taking a nap), and he immediately responded "I don't know."  
+
+Anecdotes aside, it's perfectly fine to be a junior and to confidently say that you're a junior, and if you try to overinflate too much, you will immediately be tested, so respond accordingly. 
 
 Which programming languages are you going to put at the front of your knowledge? If you're just entering the field and you're after your first or even second job, fear not - if in doubt about your ability, you can default to 4 or 5, and say something like 
 
-> "Given my current level of experience with writing code, I feel do fairly comfortable with {language\_of\_choice}, but I'll let you be the judge by asking me any questions about the language, or using that language to talk through general concepts in programming."  
+> "Given my current level of experience with writing code, I feel fairly comfortable with {language\_of\_choice}, but I'll let you be the judge by asking me any questions about the language, or using that language to talk through general concepts in programming."  
 
 This is what your interviewers are going to do anyway, but this sort of open statement lets them know that you are not trying to falsely puff up your knowledge here.
 
@@ -134,10 +136,17 @@ Essentially a closure is this: imagine a function that lives inside another func
 
 ### Call, Bind, Apply in JS
 
-This area can be a bit murky at times, but this is essential knowledge for new developers. You will really stand out and make a good impression on your interviewers if you can explain these three Javascript functions.
+This area can seem a bit murky at times, but this is essential knowledge for new developers. You will really stand out and make a good impression on your interviewers if you can explain these three Javascript functions.  
+
+Please please do your own research, both with Google and running your own example code, but essentially they are each slightly different ways to explicitly set the `this` value of a function call. Very briefly, this allows you to pass around a shared function as a *method* on a Javascript entity that responds to `this`, most likely a JS object.
+
+### Javascript `this`
+
+Can you talk about [this][codementor:this]? You may be slightly familiar with the notion of `this`, but try to be able to talk about related things such as es6 fat arrow functions and how they affect (or don't affect) `this`, especially when in the context of a closure.
 
 ### Javascript Objects
 
+What are Javascript objects? 
 - Key/value pairs
 - Usually strings as key, but what else can be used as a key?
 
@@ -155,9 +164,11 @@ However, I was able to take advantage of my experience and fairly solid understa
 
 There's a lot on the internet about nightmare algorithm questions in a job interview. If it does come up, it's my general impression (from personal experience) that it's less important to get an algorithm '100% right' than it is to thinking your way through it out loud to your interviewers, so that they can see how you think on your feet and under some slight pressure.  
 
-Software developers are problem solvers, essentially by definition. If you are hired after the interview, you will be paid for solving problems related to building software. Thus, I believe that it is fully acceptable to ask a job applicant to solve a problem in the interview. This part of the interview may happen, it may not. I've personally been in both scenarios. The main goal here is to demonstrate that you have the mental tools to handle a specific problem, so a very slight amount of glossing over the smaller details of actual implementation, as long as you sandwich this with very concrete and clear knowledge and explanation.  
+Software developers are problem solvers, essentially by definition. If you are hired after the interview, you will be paid for solving problems related to building software. Thus, I believe that it is fully acceptable to ask a job applicant to solve a problem in the interview. This part of the interview may happen, it may not. I've been in both scenarios. The main goal here is to demonstrate that you have the mental tools to handle a specific problem, so a very slight amount of glossing over the smaller details of actual implementation may be acceptable, as long as you sandwich this with very concrete and clear knowledge and explanation.  
 
-Having said that, being able to clearly explain and summarize things like loop syntax in your preferred coding language, the difference of use of if-statements and ternary expressions, as well as concepts in error handling look *very good* in a potential new hire.  
+Having said that, being able to very clearly explain and summarize things like loop syntax in your preferred coding language, the difference of use of if-statements and ternary expressions, as well as concepts in error handling look *very good* in a potential new hire.  
+
+#### If a whiteboard problem is presented to you: Stop, Drop, and then do these things:
 
 1. Talk through all requirements, asking questions for two reasons:
 
@@ -166,13 +177,12 @@ Having said that, being able to clearly explain and summarize things like loop s
 
 2. Thinking out loud, begin talking and explaining your way through your plan. You may find that you have more questions as you go along. This is good. You can also begin to write or outline some pseudo code as a mental save point to return to once you are completely clear on both the requirements and your plan of attack.
 
-3. Finally, you may begin coding. If steps 1 and 2 have fallen into place correctly, then this step may actually be the easiest of the three.
+3. Finally, you may begin coding. If steps 1 and 2 have fallen into place correctly, then this step may actually be the easiest of the three.  
 
-``` javascript
-... let us all pretend there is an example algorithm here
-```
+Ideally, you will be perceived as competent and knowledgeable, and you may not even have to finish the challenge depending on its length, as you've showcased what the interviewers **really** want to see in a potential new developer: an adaptable problem-solver with legitimate and valuable critical thinking skills.  
 
-Ideally, you will be perceived as very knowledgeable, and not even have to finish the challenge depending on its length, as you've showcased what the interviewers **really** want to see in a potential new developer: an adaptable problem-solver with legitimate and valuable critical thinking skills.
+[codementor:this]: (https://www.codementor.io/dariogarciamoya/understanding--this--in-javascript-du1084lyn?icn=post-8i1jca6jp&ici=post-du1084lyn)
+
 
 [medium:closure]: (https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6)
 
