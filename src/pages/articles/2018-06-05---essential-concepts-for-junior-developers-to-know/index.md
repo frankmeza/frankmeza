@@ -83,22 +83,11 @@ Mozilla on [HTTP Verbs][mozilla:http-verbs]
 
 True to form, here is a very high level overview here at [Wikipedia][wiki:http-status-codes] and the deeper read at [Mozilla][mozilla:http-status-codes].
 
-Status codes between 200-299 usually indicate a success of some kind. The most frequently seen are:
-- 200 SUCCESS
-- 201 CREATED
-- 204 NO_CONTENT
+Status codes between 200-299 usually indicate a success of some kind. The most frequently seen are: `200` : SUCCESS, `201` : CREATED, `204` : NO_CONTENT.  
 
-Status codes between 300-399 are used to show some kind of redirection or moving of resources to another URL. I've not seen these too too much besides:
-- 301 MOVED_PERMANENTLY
-- 302 FOUND
+Status codes between 300-399 are used to show some kind of redirection or moving of resources to another URL. I've not seen these too too much besides: `301` : MOVED_PERMANENTLY, `302` : FOUND.  
 
-Status codes between 400-499 indicate some kind of CLIENT error response. There are many 4xx responses that come up in development, and they each have slightly different meanings and uses. Here is a list of the most common ones to be able to explain:
-- 400 BAD_REQUEST
-- 401 UNAUTHORIZED
-- 403 FORBIDDEN
-- 404 NOT_FOUND
-- 418 [I'm a teapot][mozilla:teapot]
-- 422 UNPROCESSABLE_ENTITY
+Status codes between 400-499 indicate some kind of CLIENT error response. There are many 4xx responses that come up in development, and they each have slightly different meanings and uses. Here is a list of the most common ones to be able to explain: `400` : BAD_REQUEST, `401` : UNAUTHORIZED, `403` : FORBIDDEN, `404` : NOT_FOUND, `418` : [I'm a teapot][mozilla:teapot], `422` : UNPROCESSABLE_ENTITY.  
 
 Status codes between 500-599 indicate some kind of SERVER error response. Beyond 500 INTERNAL\_SERVER\_ERROR, these can be reviewed at a later time.
 
