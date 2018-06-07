@@ -95,7 +95,9 @@ Status codes between 500-599 indicate some kind of SERVER error response. Beyond
 
 ## Okay Now We Can Return to Code
 
-Now that we've covered some of the fundamentals, let's get into writing and talking about code. Be prepared to elaborate on which languages and frameworks you have worked with. You may be asked to rate yourself 1-10 in each, with 1 being you asking 'What is Javascript?' and 10 being the sole property of Brendan Eich. Let's assume that an average newly-hired-at-my-first-job developer is at about a 3/4, *possibly* a 5 with one language or framework. This is fine, better not to try to over-inflate yourself or your "knowledge" too much. I once asked a kindergartner, "What do you know, David?", to which he answered "everything." I then asked him what he was supposed to be doing at that moment (he was supposed to taking a nap), and he immediately responded "I don't know."  
+Now that we've covered some of the fundamentals, let's get into writing and talking about code. Be prepared to elaborate on which languages and frameworks you have worked with. You may be asked to rate yourself 1-10 in each, with 1 being you asking 'What is Javascript?' and 10 being the sole property of Brendan Eich. Let's assume that an average newly-hired-at-my-first-job developer is at about a 3/4, *possibly* a 5 with one language or framework.   
+
+This is fine, better not to try to over-inflate yourself or your "knowledge" too much. I once asked a kindergartner, "What do you know, David?", to which he answered "everything." I then asked him what he was supposed to be doing at that moment (he was supposed to taking a nap), and he immediately responded "I don't know."  
 
 Anecdotes aside, it's perfectly fine to be a junior and to confidently say that you're a junior, and if you try to overinflate too much, you will immediately be tested, so respond accordingly. 
 
