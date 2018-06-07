@@ -49,6 +49,8 @@ class Sidebar extends React.Component {
             <Links data={author} />
             <p className="sidebar__copyright">
               {copyright}
+              <br />
+              Favicon: Brain by Wes Breazell from the Noun Project
             </p>
           </div>
         </div>
