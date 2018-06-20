@@ -14,7 +14,7 @@ Just like you, I like stuff. *Imagine that!* Besides writing code, I'm into:
 - [jiujitsu](http://www.eastsidegrappling.com/)
 - taking care of and stretching my body/joints 
 - taking a deep breathe, taking in the moment, and [saying out loud](https://www.goodreads.com/quotes/3172-and-i-urge-you-to-please-notice-when-you-are), "Ahh, this is nice!"
-- planning my next overseas voyage -> Portugal :booked:
+- dreaming of my next overseas voyage -> Lisboa, Portugal in September 2018
 - music from around the world
 - learning/speaking foreign languages
 - sunshine and warm weather

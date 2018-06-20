@@ -6,31 +6,8 @@ path: "/now"
 
 # What I'm into right now
 
-Stardate 05/30/2018 :: I don't know why I find cryptography quite so fascinating, but I do. I do laugh to myself that it could lead to this:
+Fresh from BuzzJS in incredible New York City, nourished by [Gerard Sans'](https://twitter.com/gerardsans/) GraphQL workshop and [Prosper Otemuyiwa](https://twitter.com/unicodeveloper/)'s talk on authorization and authentication, I'm a new rider on the GraphQL train.  
 
-#### MERKED HARD
+For the near future, I'll be setting up a GQL server and client at the same time that I'm pretending to try out my [_sotaque lisboeta_](https://www.vortexmag.net/10-formas-infaliveis-de-provar-a-um-lisboeta-que-ele-tambem-tem-sotaque/) before my trip to Lisbon at the end of summer.  
 
-<img src="https://media.giphy.com/media/yK3PyRmUj0T3W/giphy.gif" width="350" />
-
-<hr>
-
-Learning about it so far, and beginning to wonder to myself just what Alice and Bob need so much secrecy for feels like this:
-
-#### H4X0R_LMAO
-
-<img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif" width="350" />
-
-<hr>
-
-...and telling your friends about your new interest in hash functions, symmetric and assymetric keys, and all other things cryptographic will make them think of you like this: 
-
-#### HACKED!
-
-<img src="https://media.giphy.com/media/eCqFYAVjjDksg/giphy.gif" width="350" />
-
-Oh well, such is the #nerdLife.
-
-I dug around and found [this course on Coursera][coursera] with Dan Boneh of Stanford University. I started the course just this last weekend, and right now I am getting a crash course in [discrete probability].
-
-[discrete probability]: (https://en.wikipedia.org/wiki/Probability_distribution)
-[coursera]:(https://www.coursera.org/learn/crypto/lecture/ubmLN/what-is-cryptography)
+*Valeu cara* 🤙
