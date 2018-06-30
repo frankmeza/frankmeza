@@ -2,7 +2,7 @@
 title: Ifs And Or Ternary Statements
 date: "2018-06-26T00:00:00.0Z"
 layout: post
-draft: false
+draft: true
 path: "/posts/ifs-ands-or-ternary-statements/"
 category: "web development"
 tags:
