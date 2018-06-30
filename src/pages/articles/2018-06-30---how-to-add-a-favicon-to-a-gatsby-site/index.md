@@ -11,7 +11,7 @@ tags:
 description: "Everyone loves a good favicon, right?"
 ---
 
-## Find a Cool Icon
+## Find A Cool Icon
 
 Head over to [The Noun Project](https://thenounproject.com/) and search for something fun. You can even change the color of your icon too (this requires a Pro Download, which is only $2). Snazzy!  
 
@@ -19,7 +19,7 @@ Okay, you've picked out the perfect icon to use as a favicon. Now download it as
 
 ![download icon](./download-from-noun-project.png)
 
-## Set it on a Cool Background Color
+## Set It On A Cool Background Color
 
 Let's get crafty here.  
 

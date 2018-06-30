@@ -25,7 +25,7 @@ Okay, so now how to prep? What to study?
 
 <hr>
 
-## Focus beyond the framework
+## Focus Beyond The Framework
 
 Yes, the job posting may have mentioned so-many-years-experience in such-and-such a framework, but we all know that frameworks serve different purposes in different types of businesses, and also go in and out of use. The question becomes more like *can you learn to work with a new one?*  
 
@@ -121,7 +121,7 @@ This is what your interviewers are going to do anyway, but this sort of open sta
 
 - `const`, `let`, `var` in closures and function scope
 
-### What is a Closure?
+### What Is A Closure?
 
 Essentially a closure is this: imagine a function that lives inside another function. That's it. But [read this][medium:closure] for a much more detailed explanation. Pay attention most to the ideas of scope and work out for yourself who has access to what values and why.
 
@@ -145,7 +145,7 @@ What are Javascript objects?
 
 Do you have a project to showcase? Awesome! This is great. You may be asked to diagram a certain operation flow of your project or explain more about large, underlying concepts instead of tiny implementation details. You may be asked questions about your project that you don't understand. This is fine, it's just your interviewers seeing how deep into the tech stack you were able to get into. If you understand part of the question, feel free to ask for more clarification. It may turn out that you actually *do* know the answer to the question (yay!), and that your initial confusion was related to terminology you are not familiar with just yet.   
 
-### My Personal Experience of Leveraging Fundamental Concepts Across Different Code Styles
+### My Personal Experience Of Leveraging Fundamental Concepts Across Different Code Styles
 
 My own timeline of tech stacks has varied from Rails/Backbone/Coffeescript to React Native/Redux/Typescript. Learning to code with Ruby and a more object-oriented approach to programming had given way to using typed Javascript and a functional style.  
 
