@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     url: 'https://frankmeza.github.io/',
-    title: 'Frank says yeah',
+    title: 'Frank says yeah!',
     subtitle: 'React/React Native/Typescript Developer, Golang hobbyist, jiujitsu player, foreign language aficionado',
     copyright: '© MIT License',
     disqusShortname: '',
@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: './src/luchador_gray.png',
+        logo: './src/yerba_mate.png',
         injectHTML: true,
         icons: {
           android: true,

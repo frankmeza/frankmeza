@@ -50,7 +50,7 @@ class Sidebar extends React.Component {
             <p className="sidebar__copyright">
               {copyright}
               <br />
-              <sub>Favicon: Luchador by Anthony Bossard</sub>
+              <sub>Favicon: Yerba Mate by Francielly Costa Senra</sub>
             </p>
           </div>
         </div>
