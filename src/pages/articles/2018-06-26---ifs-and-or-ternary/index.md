@@ -7,7 +7,7 @@ path: "/posts/ifs-ands-or-ternary-statements/"
 category: "web development"
 tags:
   - "web development"
-  - "readability"
+  - "code readability"
 description: "As developers, we swim in control statements. Which are most effective, and when?"
 ---
 
@@ -21,22 +21,28 @@ The exactitudes of "readable code" will vary from shop to shop, but after even a
 
 ## Functional Ternary Assignments 
 
-Nested ternaries have a *nasty* reputation in many circles, the first few strands of spaghetti code. In many cases, this is correct. I once met someone who that thought single-line nested ternary statements were the funniest thing, but that they were also suitable for production code.
+Nested ternaries have a *nasty* reputation in many circles, the first few strands of spaghetti code in an otherwise okay codebase. In many cases, this is correct. I once knew someone who that thought single-line nested ternary statements were the funniest thing ever, but he also thought that they were suitable for production code.
 
 ```javascript
-// don't do this
+// don't ever do this
 return text === "pizza" ? emoji.pizza : text === "tacos" ? emoji.tacos : text === "sushi" ? emoji.sushi : emoji.sadFace
 ```
 
 That looks horrible, right?... Not readable. *Who approved that PR?!*  
 
-But the ternary symbols `?` and `:` are not the bad guys here. They don't write themselves into your code at night.
+But the ternary symbols `?` and `:` are not the bad guys here. They don't write themselves into your code at night, and create boobie traps full of bugs.*
 
 ```javascript
-// same statement as a nested ternary in a function
-// this doesn't necessarily have to be a function, but it does wrap nicely
-// checks for "pizza", then "tacos", then default
-const getIcon = (text: string) => {
+const emoji = {
+    pizza: "pizzaIcon",
+    tacos: "tacosIcon",
+    sushi: "sushiIcon",
+    sadFace: "sadPandaIcon",
+}
+
+// same statement as a nested ternary
+// in a function with READABLE indentation
+const emojiIcon = (text: string) => {
     return text === "pizza"
         ? emoji.pizza
 
@@ -50,7 +56,7 @@ const getIcon = (text: string) => {
      
 ```
 
-Your function takes a string and then sequentially checks it against `"pizza"` and `"tacos"` and then finally `"sushi"`. Fairly simple stuff, says I.  
+Your function takes a string and then sequentially checks it against `"pizza"` and `"tacos"` and then finally `"sushi"`. Fairly simple stuff.  
 
 That looks fairly readable to me, but diff'rent strokes for diff'rent folks.
 
@@ -63,7 +69,7 @@ There's definitely other options if you're (not) yet into really using ternary s
 I call this one **The Gates of Hell** because your arguments pass through the IF statements one at a time, going deeper toward the bottom and the inevitable final `return` statement.
 
 ```javascript
-const getIcon = (text: string) => {
+const emojiIcon = (text: string) => {
     if (text === "pizza") {
         return emoji.pizza
     }
@@ -72,39 +78,22 @@ const getIcon = (text: string) => {
         return emoji.tacos
     }
 
+    if (text === "sushi") {
+        return emoji.sushi
+    }
+
     return emoji.sadFace
 }
 ```
 
-Apart from many more keywords and symbols than the ternary, it expresses the same logic. Is it more readable? That's really up to you (and your team) to decide.
-Let's continue with a few other versions.  
-
-## IF-ELSE-IF-ELSE
-
-If you're into the `else`, you can also do it this way.
-
-```javascript
-const getIcon = (text: string) => {
-    if (text === "pizza") {
-        return emoji.pizza
-    
-    } else if (text === "tacos") {
-        return emoji.tacos
-    
-    } else {
-        return emoji.sadFace
-    }
-}
-```
-
-I'm not really a fan of this. I'd rather use a `switch` statement, like the next example.
+Apart from many more keywords and symbols than the ternary, it expresses the same logic. If you preferred to, you could turn this into an IF-ELSE statement. Is it more readable? That's really up to you (and your team) to decide. There's also switch-statement assignment. Try that out if you want to.  
 
 ## SWITCH IT UP
 
 ```javascript
 // switch statement assignment
 // checks for "pizza", then "tacos", then default
-const getIcon = (text: string) => {
+const emojiIcon = (text: string) => {
     switch(text) {
         case "pizza":
             return emoji.pizza
@@ -116,29 +105,8 @@ const getIcon = (text: string) => {
 }
 ```
 
-```javascript
-//semantic OR assignment
-const getIcon = (text: string) => {
-    const isSmileyOrTacos = 
-        text === "pizza" || text === "tacos"
-    
-    if (isSmileyOrTacos) {
-        return { 
-            pizza: emoji.pizza,
-            tacos: emoji.tacos, 
-            message: "you get free food!" 
-        }
-    }
-    
-    return emoji.sadFace
-}
+Like I mentioned, they perform the same train of logic. With this example, you can see that it is really just a matter of preferred code style.  
 
-```
+But now let's think about what would happen
 
-
-------
-
-maybe talk about switch statement assignment and semantic variables, each of them now a separate condition to check in a certain order, either all as one line, or as a chain of declared constants.
-
-No matter which you choose, you are still essentially performing the same logic, although in some different way.  
-The question that you have to decide for yourself (or as a team) is how *most* situations are to be handled, the **go-to** way of doing things.
+* ...or do they? :P

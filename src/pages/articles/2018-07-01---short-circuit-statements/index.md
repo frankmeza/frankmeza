@@ -7,7 +7,7 @@ path: "/posts/short-circuit-statements/"
 category: "web development"
 tags:
   - "web development"
-  - "readability"
+  - "code readability"
   - "almost tweetable"
 description: "A short circuit statement is like a shortened version of a ternary statement that does one thing or no-thing."
 ---
@@ -20,7 +20,7 @@ There you are writing code. You want to run a function if a certain condition is
 isConditionTrue ? myFunction() : null
 ```
 
-That `null` just doesn't feel right, does it? Let's assume that you don't want to do anything with the `isConditionTrue` value other than checking that it's true. What do you do?  
+Let's assume that you don't want to do anything with the `isConditionTrue` value other than checking that it's true. That `null` just doesn't feel right, does it? You're not going to touch it ever... there's just no need for it. What do you do?  
 
 ## Use A Short Circuit Statement!
 
@@ -39,13 +39,15 @@ const isEitherConditionTrue = isConditionOneTrue || isConditionTwoTrue
 isEitherConditionTrue && myFunction()
 ```
 
-Yes, you can also write it as but I prefer to use *one* more line of code to make each line simpler to read.  
+Yes, you can also write it inline 
+
 ```javascript
 isConditionOneTrue || isConditionTwoTrue && myFunction()
 ```
 
-But now what if you want to check if BOTH conditions is true? I bet you can guess:
+but I prefer to use *one* more line of code to make each line simpler to read. In the above block on first read, I'd be hard-pressed to remember if it needs parenthesis, for instance.  
 
+But now what if you want to check if BOTH conditions is true? I bet you can guess:
 
 ```javascript
 const areBothConditionsTrue = isConditionOneTrue && isConditionTwoTrue
@@ -54,6 +56,8 @@ areBothConditionsTrue && myFunction()
 ```
 
 Yes, these are simple examples. But they fit well with the short-circuit statement, which is also meant to be simple.  
+
+--- 
 
 *Try these examples out in your console:
 
@@ -67,6 +71,7 @@ const myFunc = () => {
 // let value = "a string" 
 // let value = 10 
 // let value = {}
+// let value = []
 
 // these return the falsy value
 // let value = false 
