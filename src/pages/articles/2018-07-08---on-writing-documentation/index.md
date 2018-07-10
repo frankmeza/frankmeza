@@ -50,3 +50,5 @@ Experience wise
     - iterate through each slice, giving an example (generic or specific) in the certain section of the code
         - this will need to be updated in each project
         - either write the generic code from scratch or copy over snippets and then generalize them, mentally taking note of larger concepts
+    - you will continually think of the first part and quickly iterate over just that, quickly hitting upon a better and better version of the docs
+    - eventually you will come to a "best" version and then more rapidly work through the rest of the content
