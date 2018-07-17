@@ -11,9 +11,8 @@ tags:
   - "documentation"
 description: "monorepo documentation"
 ---
-
-## I :: UI Components, Core, Redux Actions
-### DONE
+## I :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
+<!-- <a name="ui-components-core-functions-redux-actions">section I</a> -->
 
 ![UI, Core, Actions](https://static.swimlanes.io/237be583a34249c8bbfe675a9651a174.png)
 
@@ -24,7 +23,7 @@ description: "monorepo documentation"
 4. actions -> reducers and/or redux sagas: actions are emitted to redux
 ```
 
-## Code Examples
+## I :: <a name="ui-components-examples"> Code Examples </a>
 
 ```typescript
 // 1. UI -> UI: actual user interaction calls a component func  
@@ -54,6 +53,10 @@ These are code examples of the first two messages in the flow of data: the calli
 Both the above `onClick` and `render` functions will be found inside of a `React.Component`. Functions and other passed in values come into the component via React `props`, i.e. `funcName`. They're then destructured and may take in possible arguments from the component function.  
 
 It is common to see a React component pass its own functions into any child components within it, in this case the confirm button receives as props its parent's function, as `this.onClick`.
+
+[back to section sequence diagram](#ui-components-top)
+
+[back to top of code examples](#ui-components-examples)
 
 <hr>
 
