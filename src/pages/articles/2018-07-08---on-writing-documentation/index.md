@@ -38,15 +38,15 @@ WHY THO
     - you can spend a few hours a week of your free time producing something worth looking over and studying
     - thus, you will have learned something, benefitting both others and yourself. 
 
-
 Experience wise
 - formatting is very important to me. 
     - As the format is not the important part of reading, you must make it as immediately readable with as little friction as possible.
     - yes, the prose is important, but overall presentation is essential. No one wants to read through bad looking documentation.
+    - the editing of such a document allows you to (usually) cut away extraneous things, leaving the reader with clearer examples and explanations, and less prose overall for more **effective** documentation
 
 - the thing that I did
-    - make a data flow sequence diagram, the whole thing from 30,000 ft
-    - then cut it up into medium sized slices - 4 to 6 is ideal - view from 5,000 ft
+    - make a data flow sequence diagram, map out the whole thing from 30,000 ft
+    - then cut it up into medium sized slices - 4 to 6 is ideal - now view each from 5,000 ft
     - iterate through each slice, giving an example (generic or specific) in the certain section of the code
         - this will need to be updated in each project
         - either write the generic code from scratch or copy over snippets and then generalize them, mentally taking note of larger concepts
