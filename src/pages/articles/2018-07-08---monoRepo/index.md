@@ -29,21 +29,31 @@ description: "monorepo documentation"
 ```typescript
 // 1. UI -> UI: actual user interaction calls a component func  
 // 2. UI -> core: the component function calls core function with opt args
-// make this part a living document: where does each piece of code live?
+
+// make this a project specific living document: 
+// where does each piece of code live?
 
 // example function in *.tsx
 onClick(param: string): void {
     // this is an action creator
-    const { funcName } = this.props
-    funcName(param)
+    const { funcName, valueFromProps } = this.props
+    funcName(param, valueFromProps)
 }
 
-// function is passed into child component
+// function is possibly passed into child component
 render(): JSX.Element {
-    <Button onClick={this.onClick} />
+    <Button text="Confirm" onClick={this.onClick} />
 }
 
 ```
+
+*### more details : actual user interaction, UI component functions, core functions*
+
+These are code examples of the first two messages in the flow of data: the calling of a UI function per the actual user, and then the calling of a core function inside of that UI function.  
+
+Both the above `onClick` and `render` functions will be found inside of a `React.Component`. Functions and other passed in values come into the component via React `props`, i.e. `funcName`. They're then destructured and may take in possible arguments from the component function.  
+
+It is common to see a React component pass its own functions into any child components within it, in this case the confirm button receives as props its parent's function, as `this.onClick`.
 
 <hr>
 
