@@ -53,7 +53,7 @@ render(): JSX.Element {
 
 ```
 
-*### more details : actual user interaction, UI component functions, core functions*
+*### summary : actual user interaction, UI component functions, core functions*
 
 These are code examples of the first two messages in the flow of data: the calling of a UI function per the actual user, and then the calling of a core function inside of that UI function.  
 
@@ -121,7 +121,7 @@ export {
 }
 ```
 
-*### more details : core functions, redux actions*
+*### summary : core functions, redux actions*
 
 These are a few code examples of the third message in the flow of data: the core function inside of that UI function (in steps one and two above) creates a redux action.  
 
@@ -145,7 +145,7 @@ A redux action returns an object with a `type` property, and may have other poss
 
 ```
 
-*### more details : actions, reducers, redux sagas*  
+*### summary : actions, reducers, redux sagas*  
 
 Redux actions are listened for in both redux reducers and redux sagas by the action `type` and then the payload is used to mutate state. More details will be found in the following section.  
 
