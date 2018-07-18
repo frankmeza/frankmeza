@@ -43,6 +43,7 @@ Experience wise
     - As the format is not the important part of reading, you must make it as immediately readable with as little friction as possible.
     - yes, the prose is important, but overall presentation is essential. No one wants to read through bad looking documentation.
     - the editing of such a document allows you to (usually) cut away extraneous things, leaving the reader with clearer examples and explanations, and less prose overall for more **effective** documentation
+    - finding the little ways to improve the doc is fun!
 
 - the thing that I did
     - make a data flow sequence diagram, map out the whole thing from 30,000 ft
@@ -51,4 +52,24 @@ Experience wise
         - this will need to be updated in each project
         - either write the generic code from scratch or copy over snippets and then generalize them, mentally taking note of larger concepts
     - you will continually think of the first part and quickly iterate over just that, quickly hitting upon a better and better version of the docs
-    - eventually you will come to a "best" version and then more rapidly work through the rest of the content
+    - eventually you will come to a "best" version and then very rapidly work through the rest of the content
+    - add self-referential links
+
+
+- - - - - 
+
+Table of Contents
+
+1. Part 1
+2. Part 2
+3. Part 3
+
+Part 1 Header
+
+Part 1 Sequence Diagram
+
+Part 1 Code example,   
+with links to each breakdown section,  
+with code examples for each section  
+
+Part 1 Code example summary
