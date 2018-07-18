@@ -11,19 +11,25 @@ tags:
   - "documentation"
 description: "monorepo documentation"
 ---
-## I :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
-<!-- <a name="ui-components-core-functions-redux-actions">section I</a> -->
+
+# Table of Contents
+1. [UI Components, Core Functions, Redux Actions](#ui-components-top)
+2. [Actions, Reducers, Saga Functions](#actions-reducers-saga-functions)
+
+
+## 1 :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
 
 ![UI, Core, Actions](https://static.swimlanes.io/237be583a34249c8bbfe675a9651a174.png)
 
-```c
-1. UI -> UI: actual user interaction calls a component func
-2. UI -> core: the component function calls a core function with opt args  
-3. core -> actions: core funcs create redux actions, passing in a payload  
-4. actions -> reducers and/or redux sagas: actions are emitted to redux
-```
+1. [UI -> UI](#ui-ui): actual user interaction calls a component func
+2. [UI -> core](#ui-core): the component function calls a core function with opt args  
+3. [core -> actions](#core-actions): core funcs create redux actions, passing in a payload  
+4. [actions -> reducers](#actions-reducers-sagas) and/or redux sagas</a>: actions are emitted to redux
 
-## I :: <a name="ui-components-examples"> Code Examples </a>
+## 1 :: <a name="ui-components-examples"> Code Examples </a>
+
+<a name="ui-ui">UI -> UI</a>  
+<a name="ui-core">UI -> core</a>  
 
 ```typescript
 // 1. UI -> UI: actual user interaction calls a component func  
@@ -54,11 +60,12 @@ Both the above `onClick` and `render` functions will be found inside of a `React
 
 It is common to see a React component pass its own functions into any child components within it, in this case the confirm button receives as props its parent's function, as `this.onClick`.
 
-[back to section sequence diagram](#ui-components-top)
-
+[back to section sequence diagram](#ui-components-top)  
 [back to top of code examples](#ui-components-examples)
 
 <hr>
+
+<a name="core-actions">core -> actions</a>
 
 ```typescript
 // 3. core -> actions: core funcs create redux actions, passing in a payload
@@ -66,7 +73,7 @@ It is common to see a React component pass its own functions into any child comp
 
 // example function type without params, with interface
 interface ClearDataAction {
-    readonly type: "NAME_OF_ACTION"
+    readonly type: "CLEAR_DATA"
 }
 
 const clearData = () => ({
@@ -112,7 +119,18 @@ export {
 }
 ```
 
+*### more details : core functions, redux actions*
+
+These are a few code examples of the third message in the flow of data: the core function inside of that UI function (in steps one and two above) creates a redux action.  
+
+A redux action returns an object with a `type` property, and may have other possible fields (its payload). Examples of this from above are `clearData` and `setData`. You can also each has their interface shape above it. The interfaces may be grouped as they are in `GroupedDataActions`, and then everything is exported.  
+
+[back to section sequence diagram](#ui-components-top)  
+[back to top of code examples](#ui-components-examples)
+
 <hr>
+
+<a name="actions-reducers-sagas">actions, reducers, sagas</a>
 
 ```typescript
 // 4. actions -> reducers and/or redux sagas: actions are emitted to redux
@@ -125,10 +143,13 @@ export {
 
 ```
 
+*### more details : actions, reducers, redux sagas*  
+
+Redux actions are listened for in both redux reducers and redux sagas by the action `type` and then the payload is used to mutate state. More details will be found in the following section.  
+
 <hr>
 
-## II :: Actions, Reducers, Saga Functions
-### TODO
+## 2 :: <a name="actions-reducers-saga-functions"> Actions, Reducers, Saga Functions</a>
 
 ![Actions, Reducers, Saga Functions](https://static.swimlanes.io/2aea22d342a38dcf747253bb7cb8c101.png)
 
@@ -138,6 +159,8 @@ export {
 // 2. actions -> sagas: complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
 
 ```
+
+## 2 :: <a name="ui-components-examples"> Code Examples </a>
 
 ```typescript
 // 1. actions -> reducers: actions go into reducers for simple replacements to state, without logic  
