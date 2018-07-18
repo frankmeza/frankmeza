@@ -20,16 +20,17 @@ description: "monorepo documentation"
 ## 1 :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
 
 ![UI, Core, Actions](https://static.swimlanes.io/237be583a34249c8bbfe675a9651a174.png)
+<!-- put the url here of the diagram editor, so the diagram can be updated -->
 
-1. [UI -> UI](#ui-ui): actual user interaction calls a component func
-2. [UI -> core](#ui-core): the component function calls a core function with opt args  
-3. [core -> actions](#core-actions): core funcs create redux actions, passing in a payload  
-4. [actions -> reducers](#actions-reducers-sagas) and/or redux sagas</a>: actions are emitted to redux
+1. [UI -> UI](#ui-ui): actual user interaction calls a component function
+2. [UI -> core](#ui-core): the component function calls a core function with optional arguments  
+3. [core -> actions](#core-actions): core functions create redux actions, passing in a payload  
+4. [actions -> reducers and/or redux sagas](#actions-reducers-sagas): actions are emitted to redux
 
 ## 1 :: <a name="ui-components-examples"> Code Examples </a>
 
-<a name="ui-ui">UI -> UI</a>  
-<a name="ui-core">UI -> core</a>  
+<sub><a name="ui-ui">UI -> UI</a></sub>  
+<sub><a name="ui-core">UI -> core</a></sub>  
 
 ```typescript
 // 1. UI -> UI: actual user interaction calls a component func  
@@ -60,12 +61,13 @@ Both the above `onClick` and `render` functions will be found inside of a `React
 
 It is common to see a React component pass its own functions into any child components within it, in this case the confirm button receives as props its parent's function, as `this.onClick`.
 
-[back to section sequence diagram](#ui-components-top)  
-[back to top of code examples](#ui-components-examples)
+<sub>[back to top of these code examples](#ui-components-examples)</sub>  
+
+<sub>[back to top of section](#ui-components-top)  </sub>
 
 <hr>
 
-<a name="core-actions">core -> actions</a>
+<sub><a name="core-actions">core -> actions</a><sub>
 
 ```typescript
 // 3. core -> actions: core funcs create redux actions, passing in a payload
@@ -125,12 +127,12 @@ These are a few code examples of the third message in the flow of data: the core
 
 A redux action returns an object with a `type` property, and may have other possible fields (its payload). Examples of this from above are `clearData` and `setData`. You can also each has their interface shape above it. The interfaces may be grouped as they are in `GroupedDataActions`, and then everything is exported.  
 
-[back to section sequence diagram](#ui-components-top)  
-[back to top of code examples](#ui-components-examples)
+<sub>[back to section sequence diagram](#ui-components-top)</sub>  
+<sub>[back to top of code examples](#ui-components-examples)</sub>  
 
 <hr>
 
-<a name="actions-reducers-sagas">actions, reducers, sagas</a>
+<sub><a name="actions-reducers-sagas">actions, reducers, sagas</a></sub>  
 
 ```typescript
 // 4. actions -> reducers and/or redux sagas: actions are emitted to redux
@@ -153,12 +155,10 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 
 ![Actions, Reducers, Saga Functions](https://static.swimlanes.io/2aea22d342a38dcf747253bb7cb8c101.png)
 
-```typescript
-// note reducers, sagas: both listen for an action's type, and then take in its payload to perform state mutations  
-// 1. actions -> reducers: actions go into reducers for simple replacements to state, without logic  
-// 2. actions -> sagas: complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
 
-```
+1. note: reducers and sagas both listen for an action's type, then take in its payload to perform state mutations, as mentioned at the end of the previous section.
+2. actions -> reducers: actions go into reducers as replacements to state, without logic  
+3. actions -> sagas: complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
 
 ## 2 :: <a name="ui-components-examples"> Code Examples </a>
 
