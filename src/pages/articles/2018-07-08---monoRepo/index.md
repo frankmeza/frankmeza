@@ -14,9 +14,6 @@ description: "monorepo documentation"
 # todo
 add sequence diagram editor urls
 
-realign section 1
-- adapt prose to updated sequence diagram
-
 section 2
 reducers DONE
 sagas
@@ -42,7 +39,7 @@ root -> store: passed in as new state
 
 ## 1 :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
 
-![UI, Core, Actions](https://static.swimlanes.io/621fa65c90a056ceb3d9759385fce633.png)
+![UI, Core, Actions](https://static.swimlanes.io/237be583a34249c8bbfe675a9651a174.png)
 
 <!-- edit this diagram
 https://swimlanes.io/#VY4xDsIwDEX3nMIjSHCBDkiICUagB7AS01pKk8pxBL09pq0qsfnb7z/5yRqpgfYKlzyMOVHScrBZCF41eeWcLJ+XwbnK4DcOdndCr7fHHo4n24uJaiEBTkqCcwdUuOtICuBMbFbn5mjFBWxAe/pHrGNp9Xgh1Cz2DKYAHmNcLwXerL3pR5xixuDc2jC1UKifZgN/OhpYlQJoXq4woO85kUzuCw== -->
