@@ -170,7 +170,7 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 
 <hr>
 
-## 2 :: <a name="actions-reducers-saga-functions-top"> Actions, Reducers, Saga Functions</a>
+## 2 :: <a name="actions-reducers-sagas-top"> Actions, Reducers, Saga Functions</a>
 
 ![Actions, Reducers, Saga Functions](https://static.swimlanes.io/2aea22d342a38dcf747253bb7cb8c101.png)
 <!-- edit this sequence diagram at https://swimlanes.io/u/Sk314q_Gm , and then update image url ^^ -->
@@ -225,10 +225,8 @@ const rootReducer = combineReducers({
 
 Redux actions are listened for in each reducer, which is responsible for updating its part of app state. The reducer is a function, and this function is passed into the root reducer. The root reducer is then passed into the [redux store](#redux-store) for state mutation.
 
+<sub>[back to section sequence diagram](#actions-reducers-sagas-top)</sub>  
 <sub>[back to top of code examples](#actions-reducers-sagas-examples)</sub>  
-<sub>[back to section sequence diagram](#actions-reducers-sagas-examples)</sub>  
-
-
 
 ## Redux Sagas
 
@@ -274,6 +272,7 @@ export default function* root(): {} {
     ]
 }
 ```
+
 <sub>[back to table of contents](#table-of-contents)</sub>
 
 ## Store, UI Components, UI As A Whole
