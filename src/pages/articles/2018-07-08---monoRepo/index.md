@@ -11,16 +11,41 @@ tags:
   - "documentation"
 description: "monorepo documentation"
 ---
+# todo
+add sequence diagram editor urls
+
+realign section 1
+- adapt prose to updated sequence diagram
+
+section 2
+reducers DONE
+sagas
+- update 
+
 
 # Table of Contents
 1. [UI Components, Core Functions, Redux Actions](#ui-components-top)
 2. [Actions, Reducers, Saga Functions](#actions-reducers-saga-functions)
+    - [reducers](#actions-reducers)
+    - [sagas](#actions-sagas)
+3. [Store, UI Components, UI As A Whole](#store-ui-components-ui-as-a-whole)
+
+TODO make section 2 ^^ into two big subsections - reducers && sagas
+seq diagram for reducer section - 
+
+```
+reducer -> root reducer: each is passed in
+root -> store: passed in as new state
+
+```
 
 
 ## 1 :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
 
-![UI, Core, Actions](https://static.swimlanes.io/237be583a34249c8bbfe675a9651a174.png)
-<!-- put the url here of the diagram editor, so the diagram can be updated -->
+![UI, Core, Actions](https://static.swimlanes.io/621fa65c90a056ceb3d9759385fce633.png)
+
+<!-- edit this diagram
+https://swimlanes.io/#VY4xDsIwDEX3nMIjSHCBDkiICUagB7AS01pKk8pxBL09pq0qsfnb7z/5yRqpgfYKlzyMOVHScrBZCF41eeWcLJ+XwbnK4DcOdndCr7fHHo4n24uJaiEBTkqCcwdUuOtICuBMbFbn5mjFBWxAe/pHrGNp9Xgh1Cz2DKYAHmNcLwXerL3pR5xixuDc2jC1UKifZgN/OhpYlQJoXq4woO85kUzuCw== -->
 
 1. [UI -> UI](#ui-ui): actual user interaction calls a component function
 2. [UI -> core](#ui-core): the component function calls a core function with optional arguments  
@@ -154,16 +179,20 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 ## 2 :: <a name="actions-reducers-saga-functions"> Actions, Reducers, Saga Functions</a>
 
 ![Actions, Reducers, Saga Functions](https://static.swimlanes.io/2aea22d342a38dcf747253bb7cb8c101.png)
+<!-- edit this sequence diagram at https://swimlanes.io/u/Sk314q_Gm , and then update image url ^^ -->
 
-
-1. note: reducers and sagas both listen for an action's type, then take in its payload to perform state mutations, as mentioned at the end of the previous section.
-2. actions -> reducers: actions go into reducers as replacements to state, without logic  
-3. actions -> sagas: complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
+*note: reducers and sagas both listen for an action's type, then take in its payload to perform state mutations, as mentioned at the end of the previous section.*
+1. [actions -> reducers](#actions-reducers): actions go into reducers as replacements to state, without logic  
+2. [actions -> sagas](#actions-sagas): complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
 
 ## 2 :: <a name="ui-components-examples"> Code Examples </a>
 
+<sub><a name="actions-reducers">actions -> reducers</a></sub>  
+
 ```typescript
-// 1. actions -> reducers: actions go into reducers for simple replacements to state, without logic  
+// 1. actions -> reducers: actions go into reducers 
+// for simple replacements to state, without logic
+
 // make this part a living document: where does each piece of code live?
 import { DataShape, INITIAL_STATE } from "../core"
 
@@ -171,8 +200,7 @@ function plainReducer(action: ActionTypeInterface) {
     switch (action.type) {
         // this is the type listened for
         case "SET_DATA":
-            // this is what is returned to the state tree,
-            // only simple replacements
+            // this is the mutation to the state tree
             return { ...state, data: action.data }
         case "CLEAR_DATA":
             return INITIAL_STATE
@@ -180,29 +208,104 @@ function plainReducer(action: ActionTypeInterface) {
             return INITIAL_STATE
     }
 }
+```
+
+*Each reducer is passed into the root reducer:*
+
+```typescript
 
 // root reducer
 import { rootReducer } from "redux"
 import { plainReducer } from "../data/plainFile"
 import { anotherPlainReducer } from "../data/anotherPlainFile"
 
-// each reducer is fed into the rootReducer
+
 const rootReducer = combineReducers({
     plainReducer,
     anotherPlainReducer,
 })
 
-// the rootReducer is then fed into the redux store...
+```
+
+*The rootReducer is then passed into the [redux store](#redux-store) for state mutation.*
+
+
+## Redux Sagas
+
+<sub><a name="actions-sagas">actions -> sagas</a></sub>  
+
+TODO update seq diagram with actions -> sagas: actions are listened for in sagas index
+
+![Redux Sagas](https://static.swimlanes.io/3a71dd5bb268c5fd008a1103178e7368.png)
+<!-- edit this sequence diagram at https://swimlanes.io/u/Bk8NS9dMQ , then update image url ^^ -->
+
+```
+sagas -> external API: request is made for data to be exchanged
+external API -> sagas: returns raw response
+sagas -> utils: utils are called, to actually perform business logic
+utils -> sagas: data is returned, fit for saga to give to an action
+sagas -> actions: return final data to actions
+```
+
+```typescript
+// sagas/index.ts
+
+import { takeEvery } from "redux-saga/effects"
+import { handleMetaData } from "../metadata_sagas"
+import { handleClientMsg } from "../client_sagas"
+import { handleLogin } from "../login_sagas"
+import {
+    handleLogin,
+    handleLoginResponse,
+    handleLogout,
+    handleLogoutResponse,
+} from "../modules/logout/logout_sagas"
+
+export default function* root(): {} {
+    yield [
+        // metadata
+        takeEvery("HANDLE_METADATA", handleMetaData),
+        takeEvery("HANDLE_CLIENT_MSG", handleClientMsg),
+        // login, logout
+        takeEvery("HANDLE_LOGIN", handleLogin),
+        takeEvery("HANDLE_LOGIN_RESPONSE", handleLogin),
+        takeEvery("HANDLE_LOGOUT", handleLogout),
+        takeEvery("HANDLE_LOGOUT_RESPONSE", handleLogoutResponse),
+    ]
+}
+```
+
+
+## Store, UI Components, UI As A Whole
+
+![Store, UI Components, UI As  Whole](https://static.swimlanes.io/a92eb3d0100848b0d732c51aceab2a42.png)
+
+```
+Title: Store, UI Components, UI As  whole
+
+store -> components: components are as presentational as possible
+components -> ui: the components make up the ui, also as presentational as possible, maintaining minimal ui state
+ui -> ui utils: sorting and filtering based on actual user interaction is handled in ui utils
+```
+
+
+
+```typescript
+// client.ts or web/api.ts
+
 
 ```
 
 ```typescript
+
 // store.ts
 
 import { createStore, applyMiddleware } from "redux"
-import { Sagas, Reducers, Core } from "common"
-import createSagaMiddleware from "redux-saga"
 import { createLogger } from "redux-logger"
+import createSagaMiddleware from "redux-saga"
+
+// our own dependencies, from "common" module
+import { Sagas, Reducers, Core } from "common"
 
 import { AppState } from "../core/app_state"
 
@@ -226,75 +329,4 @@ export const store = createStore(
 
 sagaMiddleware.run(Sagas.root)
 
-// sagas/index
-
-import { funcName } from "../modules/shape_name/shape_sagas"
-import { 
-    funcName2,
-    funcName3,
-    funcName3,
-} from "../modules/other_shape_name/other_shape_sagas"
-
-const sagasIndex() {
-    forEvery("ACTION_NAME1", funcName),
-    forEvery("ACTION_NAME2", funcName2),
-    // and more of the same
-}
-
-```
-
-## Redux Sagas
-
-![Redux Sagas](https://static.swimlanes.io/3a71dd5bb268c5fd008a1103178e7368.png)
-
-```
-sagas -> external API: request is made for data to be exchanged
-external API -> sagas: returns raw response
-sagas -> utils: utils are called, to actually perform business logic
-utils -> sagas: data is returned, fit for saga to give to an action
-sagas -> actions: return final data to actions
-```
-
-## Store, UI Components, UI As A Whole
-
-![Store, UI Components, UI As  Whole](https://static.swimlanes.io/a92eb3d0100848b0d732c51aceab2a42.png)
-
-```
-Title: Store, UI Components, UI As  whole
-
-store -> components: components are as presentational as possible
-components -> ui: the components make up the ui, also as presentational as possible, maintaining miimal ui state
-ui -> ui utils: sorting and filtering based on actual user interaction is handled in ui utils
-```
-
-
-
-```typescript
-// client.ts or web/api.ts
-
-
-```
-
-
-```typescript
-// sagas/index.ts
-
-import { takeEvery } from "redux-saga/effects"
-import { handleMetaData } from "../metadata_sagas"
-import { handleClientMsg } from "../client_sagas"
-import { handleLogin } from "../login_sagas"
-import {
-    handleLogout,
-    handleLogoutResponse,
-} from "../modules/logout/logout_sagas"
-
-export default function* root(): {} {
-    yield [
-        takeEvery("HANDLE_LOGIN_RESP", handleLogin),
-        takeEvery("LOGOUT", handleLogout),
-        takeEvery("HANDLE_LOGOUT_RESPONSE", handleLogoutResponse),
-        takeEvery("HANDLE_METADATA", handleMetaData),
-        takeEvery("HANDLE_CLIENT_MSG", handleClientMsg),
-    ]
-}
 ```

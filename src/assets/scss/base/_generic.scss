@@ -107,11 +107,12 @@ strong {
 }
 
 ul {
-    list-style: square;
+    list-style: disc;
+    margin-top: -25px;
     @include margin-bottom(1);
     & li {
-        padding: 0 5px;
-        margin-bottom: 10px;
+        // padding: 0 5px;
+        // margin-bottom: 10px;
     }
 }
 
