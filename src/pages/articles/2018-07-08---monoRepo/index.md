@@ -11,21 +11,15 @@ tags:
   - "documentation"
 description: "monorepo documentation"
 ---
-# todo
-add sequence diagram editor urls
 
-section 2
-reducers DONE
-sagas
-- update 
-
+<sub><a name="table-of-contents"> top of page</a></sub>  
 
 # Table of Contents
 1. [UI Components, Core Functions, Redux Actions](#ui-components-top)
-2. [Actions, Reducers, Saga Functions](#actions-reducers-saga-functions)
+2. [Actions, Reducers, Saga Functions](#actions-reducers-saga-functions-top)
     - [reducers](#actions-reducers)
     - [sagas](#actions-sagas)
-3. [Store, UI Components, UI As A Whole](#store-ui-components-ui-as-a-whole)
+3. [Store, UI Components, UI As A Whole](#store-ui-components-ui-as-a-whole-top)
 
 TODO make section 2 ^^ into two big subsections - reducers && sagas
 seq diagram for reducer section - 
@@ -83,8 +77,7 @@ Both the above `onClick` and `render` functions will be found inside of a `React
 
 It is common to see a React component pass its own functions into any child components within it, in this case the confirm button receives as props its parent's function, as `this.onClick`.
 
-<sub>[back to top of these code examples](#ui-components-examples)</sub>  
-
+<sub>[back to top of these code examples](#ui-components-examples)  </sub>  
 <sub>[back to top of section](#ui-components-top)  </sub>
 
 <hr>
@@ -171,9 +164,13 @@ A redux action returns an object with a `type` property, and may have other poss
 
 Redux actions are listened for in both redux reducers and redux sagas by the action `type` and then the payload is used to mutate state. More details will be found in the following section.  
 
+<sub>[back to section sequence diagram](#ui-components-top)</sub>  
+<sub>[back to top of code examples](#ui-components-examples)</sub>  
+<sub>[back to table of contents](#table-of-contents)</sub>  
+
 <hr>
 
-## 2 :: <a name="actions-reducers-saga-functions"> Actions, Reducers, Saga Functions</a>
+## 2 :: <a name="actions-reducers-saga-functions-top"> Actions, Reducers, Saga Functions</a>
 
 ![Actions, Reducers, Saga Functions](https://static.swimlanes.io/2aea22d342a38dcf747253bb7cb8c101.png)
 <!-- edit this sequence diagram at https://swimlanes.io/u/Sk314q_Gm , and then update image url ^^ -->
@@ -182,7 +179,8 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 1. [actions -> reducers](#actions-reducers): actions go into reducers as replacements to state, without logic  
 2. [actions -> sagas](#actions-sagas): complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
 
-## 2 :: <a name="ui-components-examples"> Code Examples </a>
+## 2 :: <a name="actions-reducers-sagas-examples"> Code Examples </a>
+
 
 <sub><a name="actions-reducers">actions -> reducers</a></sub>  
 
@@ -223,8 +221,13 @@ const rootReducer = combineReducers({
 })
 
 ```
+*### summary : actions, reducers, root reducer, store*  
 
-*The rootReducer is then passed into the [redux store](#redux-store) for state mutation.*
+Redux actions are listened for in each reducer, which is responsible for updating its part of app state. The reducer is a function, and this function is passed into the root reducer. The root reducer is then passed into the [redux store](#redux-store) for state mutation.
+
+<sub>[back to top of code examples](#actions-reducers-sagas-examples)</sub>  
+<sub>[back to section sequence diagram](#actions-reducers-sagas-examples)</sub>  
+
 
 
 ## Redux Sagas
@@ -271,7 +274,7 @@ export default function* root(): {} {
     ]
 }
 ```
-
+<sub>[back to table of contents](#table-of-contents)</sub>
 
 ## Store, UI Components, UI As A Whole
 
