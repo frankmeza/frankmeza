@@ -171,6 +171,8 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 1. [actions -> reducers](#actions-reducers): actions go into reducers as replacements to state, without logic  
 2. [actions -> sagas](#actions-sagas): complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
 
+<hr>
+
 ### Reducer Flow
 
 ![Actions, Reducers, Root reducer, Store](https://static.swimlanes.io/934351683df9f46731bf2d5720f638bc.png)
@@ -180,6 +182,8 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 1. [action -> reducer](#actions-reducer): actions are listened for and received by reducers 
 2. [reducer -> root reducer](#reducer-root-reducer): entire reducer is passed into root reducer as an argument to combineReducers()
 3. [root reducer -> store](#root-reducer-store): the root reducer is passed into redux store, updating app state along with it
+
+<hr>
 
 ### Redux Saga Flow
 
@@ -287,7 +291,9 @@ export default function* root(): {} {
 <sub><a name="external-API-sagas">external API -> sagas (response)</a></sub>  
 
 ```typescript
+
 // generic_sagas.ts
+
 import { DataShapeResponse } from "../module/data/data_remote"
 
 export function* sagaFunc(action: ActionNameAction): {} {
@@ -304,10 +310,76 @@ export function* sagaFunc(action: ActionNameAction): {} {
 *summary here...*
 
 <sub><a name="sagas-utils">sagas -> utils</a></sub>  
+
+```typescript
+
+// generic_sagas.ts
+
+import { DataShape, RelatedShape } from "../module/data/data_state"
+import { utilFunc } from "../utils/data_utils"
+
+export function* sagaFunc(action: ActionNameAction): {} {
+    
+    const { payload } = action
+
+    const selectedData = yield select(
+        currentData,
+    )
+
+    const resultFromUtil: DataShape = utilFunc(
+        selectedData,
+        payload,
+    )
+
+    // more logic with resultFromUtil...
+}
+```
+
+*summary here...*
+
 <sub><a name="utils-sagas">utils -> sagas</a></sub>  
+
+```typescript
+
+// utils/data_utils.ts
+
+import { DataShape, RelatedShape } from "../module/data/data_state"
+import { DataShapeResponse } from "../module/data/data_remote"
+
+export const utilFunc = (
+    data: DataShapeResponse,
+    relatedData: RelatedData,
+): DataShape => {
+    // ingress function or other state-ful computation
+}
+
+```
+
 <sub><a name="sagas-actions">sagas -> actions</a></sub>  
 
-<sub>[back to table of contents](#table-of-contents)</sub>
+```typescript
+
+// generic_sagas.ts
+
+import { DataShape, RelatedShape } from "../module/data/data_state"
+import { utilFunc } from "../utils/data_utils"
+
+export function* sagaFunc(action: ActionNameAction): {} {
+
+    // control flow logic
+    const resultFromUtil: DataShape = utilFunc(
+        selectedData,
+        payload,
+    )
+
+    // after control flow logic is complete,
+    // the saga function sends its final result into 
+    // redux state by using an action into redux
+    yield put(actionGoingIntoRedux(resultFromUtil))    
+}
+```
+
+<sub>[DataShape to table of contents](#table-of-contents)</sub>
 
 ## Store, UI Components, UI As A Whole
 
