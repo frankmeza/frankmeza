@@ -21,16 +21,6 @@ description: "monorepo documentation"
     - [sagas](#actions-sagas)
 3. [Store, UI Components, UI As A Whole](#store-ui-components-ui-as-a-whole-top)
 
-TODO make section 2 ^^ into two big subsections - reducers && sagas
-seq diagram for reducer section - 
-
-```
-reducer -> root reducer: each is passed in
-root -> store: passed in as new state
-
-```
-
-
 ## 1 :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
 
 ![UI, Core, Actions](https://static.swimlanes.io/237be583a34249c8bbfe675a9651a174.png)
@@ -181,8 +171,9 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 
 ## 2 :: <a name="actions-reducers-sagas-examples"> Code Examples </a>
 
-
 <sub><a name="actions-reducers">actions -> reducers</a></sub>  
+
+![reducers, root reducer, store](https://static.swimlanes.io/5a6bcb380d6ea75e9b32756dad1d423a.png)
 
 ```typescript
 // 1. actions -> reducers: actions go into reducers 
@@ -228,13 +219,32 @@ Redux actions are listened for in each reducer, which is responsible for updatin
 <sub>[back to section sequence diagram](#actions-reducers-sagas-top)</sub>  
 <sub>[back to top of code examples](#actions-reducers-sagas-examples)</sub>  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Redux Sagas
 
 <sub><a name="actions-sagas">actions -> sagas</a></sub>  
 
-TODO update seq diagram with actions -> sagas: actions are listened for in sagas index
-
-![Redux Sagas](https://static.swimlanes.io/3a71dd5bb268c5fd008a1103178e7368.png)
+![Redux Sagas](https://static.swimlanes.io/e1cfc6340afd0a71255d213ce4da81a2.png)
 <!-- edit this sequence diagram at https://swimlanes.io/u/Bk8NS9dMQ , then update image url ^^ -->
 
 ```
@@ -274,6 +284,22 @@ export default function* root(): {} {
 ```
 
 <sub>[back to table of contents](#table-of-contents)</sub>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Store, UI Components, UI As A Whole
 
