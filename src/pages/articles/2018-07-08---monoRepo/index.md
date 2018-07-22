@@ -168,25 +168,35 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 
 *note: reducers and sagas both listen for an action's type, then take in its payload to perform state mutations, as mentioned at the end of the previous section.*
 
+1. [actions -> reducers](#actions-reducers): actions go into reducers as replacements to state, without logic  
+2. [actions -> sagas](#actions-sagas): complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
+
+### Reducer Flow
+
 ![Actions, Reducers, Root reducer, Store](https://static.swimlanes.io/934351683df9f46731bf2d5720f638bc.png)
 <!-- edit at https://swimlanes.io/u/H1sxZIbVm -->
 
-1. [actions -> reducers](#actions-reducers): actions go into reducers as replacements to state, without logic  
+
+1. [action -> reducer](#actions-reducer): actions are listened for and received by reducers 
+2. [reducer -> root reducer](#reducer-root-reducer): entire reducer is passed into root reducer as an argument to combineReducers()
+3. [root reducer -> store](#root-reducer-store): the root reducer is passed into redux store, updating app state along with it
+
+### Redux Saga Flow
 
 ![Redux Sagas](https://static.swimlanes.io/6402e453d7c50d69f6669eda86776355.png)
 <!-- edit this sequence diagram at https://swimlanes.io/u/Bk8NS9dMQ , then update image url ^^ -->
 
-1. [actions -> sagas](#actions-sagas): complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
+1. [actions -> sagas, via index](#actions-sagas-via-index): action types are listened for in the sagas index, then routed to correct saga function  
+2. [sagas -> external API](#sagas-external-API): request is made for data to be exchanged  
+3. [external API -> sagas](#external-API-sagas): returns raw response  
+4. [sagas -> utils](#sagas-utils): utils are called, to actually perform business logic  
+5. [utils -> sagas](#utils-sagas): data is returned, fit for saga to give to an action  
+6. [sagas -> actions](#sagas-actions): return final data to actions  
 
 ## 2 :: <a name="actions-reducers-sagas-examples"> Code Examples </a>
 
 <sub><a name="actions-reducers">actions -> reducers</a></sub>  
 
-### Reducer Flow
-
-1. [action -> reducer](#actions-reducer): actions are listened for and received by reducers 
-2. [reducer -> root reducer](#reducer-root-reducer): entire reducer is passed into root reducer as an argument to combineReducers()
-3. [root reducer -> store](#root-reducer-store): the root reducer is passed into redux store, updating app state along with it
 
 
 ```typescript
@@ -240,16 +250,6 @@ Redux actions are listened for in each reducer, which is responsible for updatin
 <hr>
 
 <sub><a name="actions-sagas">actions -> sagas</a></sub>  
-
-### Redux Saga Flow
-
-1. [actions -> sagas, via index](#actions-sagas-via-index): action types are listened for in the sagas index, then routed to correct saga function  
-2. [sagas -> external API](#sagas-external-API): request is made for data to be exchanged  
-3. [external API -> sagas](#external-API-sagas): returns raw response  
-4. [sagas -> utils](#sagas-utils): utils are called, to actually perform business logic  
-5. [utils -> sagas](#utils-sagas): data is returned, fit for saga to give to an action  
-6. [sagas -> actions](#sagas-actions): return final data to actions  
-
 <sub><a name="actions-sagas-via-index">actions -> sagas, via index</a></sub>
 
 ```typescript
