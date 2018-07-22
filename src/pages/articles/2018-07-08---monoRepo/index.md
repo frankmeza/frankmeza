@@ -20,6 +20,7 @@ description: "monorepo documentation"
     - [reducers](#actions-reducers)
     - [sagas](#actions-sagas)
 3. [Store, UI Components, UI As A Whole](#store-ui-components-ui-as-a-whole-top)
+4. [Client - web or mobile](#client-web-or-mobile)
 
 ## 1 :: <a name="ui-components-top"> UI Components, Core Functions, Redux Actions</a>
 
@@ -179,13 +180,14 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 
 ## 2 :: <a name="actions-reducers-sagas-examples"> Code Examples </a>
 
+<sub><a name="actions-reducers">actions -> reducers</a></sub>  
+
 ### Reducer Flow
 
 1. [action -> reducer](#actions-reducer): actions are listened for and received by reducers 
 2. [reducer -> root reducer](#reducer-root-reducer): entire reducer is passed into root reducer as an argument to combineReducers()
 3. [root reducer -> store](#root-reducer-store): the root reducer is passed into redux store, updating app state along with it
 
-<sub><a name="actions-reducers">actions -> reducers</a></sub>  
 
 ```typescript
 // 1. actions -> reducers: actions go into reducers 
@@ -235,17 +237,20 @@ Redux actions are listened for in each reducer, which is responsible for updatin
 <sub>[back to section sequence diagram](#actions-reducers-sagas-top)</sub>  
 <sub>[back to top of code examples](#actions-reducers-sagas-examples)</sub>  
 
-## Redux Sagas
+<hr>
 
 <sub><a name="actions-sagas">actions -> sagas</a></sub>  
 
-actions -> sagas: action types are listened for in the sagas index, then routed to correct saga function  
-sagas -> external API: request is made for data to be exchanged  
-external API -> sagas: returns raw response  
-sagas -> utils: utils are called, to actually perform business logic  
-utils -> sagas: data is returned, fit for saga to give to an action  
-sagas -> actions: return final data to actions  
+### Redux Saga Flow
 
+1. [actions -> sagas, via index](#actions-sagas-via-index): action types are listened for in the sagas index, then routed to correct saga function  
+2. [sagas -> external API](#sagas-external-API): request is made for data to be exchanged  
+3. [external API -> sagas](#external-API-sagas): returns raw response  
+4. [sagas -> utils](#sagas-utils): utils are called, to actually perform business logic  
+5. [utils -> sagas](#utils-sagas): data is returned, fit for saga to give to an action  
+6. [sagas -> actions](#sagas-actions): return final data to actions  
+
+<sub><a name="actions-sagas-via-index">actions -> sagas, via index</a></sub>
 
 ```typescript
 // sagas/index.ts
@@ -273,7 +278,34 @@ export default function* root(): {} {
         takeEvery("HANDLE_LOGOUT_RESPONSE", handleLogoutResponse),
     ]
 }
+
 ```
+
+*summary here...*
+
+<sub><a name="sagas-external-API">sagas -> external API (request)</a></sub>  
+<sub><a name="external-API-sagas">external API -> sagas (response)</a></sub>  
+
+```typescript
+// generic_sagas.ts
+import { DataShapeResponse } from "../module/data/data_remote"
+
+export function* sagaFunc(action: ActionNameAction): {} {
+    
+    const result: DataShapeResponse = yield call(
+        otherSagaFunctionMakingExternalCall,
+    )
+
+    // more logic with result...
+}
+
+```
+
+*summary here...*
+
+<sub><a name="sagas-utils">sagas -> utils</a></sub>  
+<sub><a name="utils-sagas">utils -> sagas</a></sub>  
+<sub><a name="sagas-actions">sagas -> actions</a></sub>  
 
 <sub>[back to table of contents](#table-of-contents)</sub>
 
@@ -288,8 +320,6 @@ store -> components: components are as presentational as possible
 components -> ui: the components make up the ui, also as presentational as possible, maintaining minimal ui state
 ui -> ui utils: sorting and filtering based on actual user interaction is handled in ui utils
 ```
-
-
 
 ```typescript
 // client.ts or web/api.ts
