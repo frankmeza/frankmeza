@@ -379,14 +379,16 @@ export function* sagaFunc(action: ActionNameAction): {} {
 }
 ```
 
-<sub>[DataShape to table of contents](#table-of-contents)</sub>
+<sub>[back to table of contents](#table-of-contents)</sub>
+
+<hr>
 
 ## Store, UI Components, UI As A Whole
 
-![Store, UI Components, UI As  Whole](https://static.swimlanes.io/a92eb3d0100848b0d732c51aceab2a42.png)
+![Store, UI Components, UI As A Whole](https://static.swimlanes.io/a92eb3d0100848b0d732c51aceab2a42.png)
 
 ```
-Title: Store, UI Components, UI As  whole
+Title: Store, UI Components, UI As A Whole
 
 store -> components: components are as presentational as possible
 components -> ui: the components make up the ui, also as presentational as possible, maintaining minimal ui state
