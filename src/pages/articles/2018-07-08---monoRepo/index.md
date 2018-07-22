@@ -162,18 +162,30 @@ Redux actions are listened for in both redux reducers and redux sagas by the act
 
 ## 2 :: <a name="actions-reducers-sagas-top"> Actions, Reducers, Saga Functions</a>
 
-![Actions, Reducers, Saga Functions](https://static.swimlanes.io/2aea22d342a38dcf747253bb7cb8c101.png)
+![Actions, Reducers, Saga Functions](https://static.swimlanes.io/58010d89c4c2593a6961fd402dd1fdaa.png)
 <!-- edit this sequence diagram at https://swimlanes.io/u/Sk314q_Gm , and then update image url ^^ -->
 
 *note: reducers and sagas both listen for an action's type, then take in its payload to perform state mutations, as mentioned at the end of the previous section.*
+
+![Actions, Reducers, Root reducer, Store](https://static.swimlanes.io/934351683df9f46731bf2d5720f638bc.png)
+<!-- edit at https://swimlanes.io/u/H1sxZIbVm -->
+
 1. [actions -> reducers](#actions-reducers): actions go into reducers as replacements to state, without logic  
-2. [actions -> sagas](#actions-sagas): complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
+
+![Redux Sagas](https://static.swimlanes.io/6402e453d7c50d69f6669eda86776355.png)
+<!-- edit this sequence diagram at https://swimlanes.io/u/Bk8NS9dMQ , then update image url ^^ -->
+
+1. [actions -> sagas](#actions-sagas): complicated or state-ful logic is orchestrated in the sagas, where control flow lives  
 
 ## 2 :: <a name="actions-reducers-sagas-examples"> Code Examples </a>
 
-<sub><a name="actions-reducers">actions -> reducers</a></sub>  
+### Reducer Flow
 
-![reducers, root reducer, store](https://static.swimlanes.io/5a6bcb380d6ea75e9b32756dad1d423a.png)
+1. [action -> reducer](#actions-reducer): actions are listened for and received by reducers 
+2. [reducer -> root reducer](#reducer-root-reducer): entire reducer is passed into root reducer as an argument to combineReducers()
+3. [root reducer -> store](#root-reducer-store): the root reducer is passed into redux store, updating app state along with it
+
+<sub><a name="actions-reducers">actions -> reducers</a></sub>  
 
 ```typescript
 // 1. actions -> reducers: actions go into reducers 
@@ -196,6 +208,8 @@ function plainReducer(action: ActionTypeInterface) {
 }
 ```
 
+<sub><a name="reducer-root-reducer">reducer -> root reducer</a></sub>  
+
 *Each reducer is passed into the root reducer:*
 
 ```typescript
@@ -214,46 +228,24 @@ const rootReducer = combineReducers({
 ```
 *### summary : actions, reducers, root reducer, store*  
 
+<sub><a name="root-reducer-store">root reducer -> store</a></sub>
+
 Redux actions are listened for in each reducer, which is responsible for updating its part of app state. The reducer is a function, and this function is passed into the root reducer. The root reducer is then passed into the [redux store](#redux-store) for state mutation.
 
 <sub>[back to section sequence diagram](#actions-reducers-sagas-top)</sub>  
 <sub>[back to top of code examples](#actions-reducers-sagas-examples)</sub>  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Redux Sagas
 
 <sub><a name="actions-sagas">actions -> sagas</a></sub>  
 
-![Redux Sagas](https://static.swimlanes.io/e1cfc6340afd0a71255d213ce4da81a2.png)
-<!-- edit this sequence diagram at https://swimlanes.io/u/Bk8NS9dMQ , then update image url ^^ -->
+actions -> sagas: action types are listened for in the sagas index, then routed to correct saga function  
+sagas -> external API: request is made for data to be exchanged  
+external API -> sagas: returns raw response  
+sagas -> utils: utils are called, to actually perform business logic  
+utils -> sagas: data is returned, fit for saga to give to an action  
+sagas -> actions: return final data to actions  
 
-```
-sagas -> external API: request is made for data to be exchanged
-external API -> sagas: returns raw response
-sagas -> utils: utils are called, to actually perform business logic
-utils -> sagas: data is returned, fit for saga to give to an action
-sagas -> actions: return final data to actions
-```
 
 ```typescript
 // sagas/index.ts
@@ -284,22 +276,6 @@ export default function* root(): {} {
 ```
 
 <sub>[back to table of contents](#table-of-contents)</sub>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Store, UI Components, UI As A Whole
 
