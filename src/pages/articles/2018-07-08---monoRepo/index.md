@@ -260,6 +260,7 @@ Redux actions are listened for in each reducer, which is responsible for updatin
 // sagas/index.ts
 
 import { takeEvery } from "redux-saga/effects"
+// imported callbacks (all generator functions)
 import { handleMetaData } from "../metadata_sagas"
 import { handleClientMsg } from "../client_sagas"
 import { handleLogin } from "../login_sagas"
@@ -285,7 +286,11 @@ export default function* root(): {} {
 
 ```
 
-*summary here...*
+
+
+The sagas index behaves much like a reducer in that it listens for redux actions like `"HANDLE_METADATA"` , and then routes that action and its payload to its callback function `handleMetaData` . This callback is imported from its `_sagas` file above the `root` function, so that the index can find it.
+
+<hr>
 
 <sub><a name="sagas-external-API">sagas -> external API (request)</a></sub>  
 <sub><a name="external-API-sagas">external API -> sagas (response)</a></sub>  
@@ -307,9 +312,14 @@ export function* sagaFunc(action: ActionNameAction): {} {
 
 ```
 
-*summary here...*
+*### summary : sagas and external API calls*  
+
+The saga functions are responsible for sending requests to the `client_sagas` so that it can actually make the external call, and the `client.ts` will introduce the incoming data into redux. TODO - client and client sagas
+
+<hr>
 
 <sub><a name="sagas-utils">sagas -> utils</a></sub>  
+<sub><a name="utils-sagas">utils -> sagas</a></sub>  
 
 ```typescript
 
@@ -335,10 +345,6 @@ export function* sagaFunc(action: ActionNameAction): {} {
 }
 ```
 
-*summary here...*
-
-<sub><a name="utils-sagas">utils -> sagas</a></sub>  
-
 ```typescript
 
 // utils/data_utils.ts
@@ -354,6 +360,14 @@ export const utilFunc = (
 }
 
 ```
+
+*### summary : sagas and util functions*  
+
+Saga and util functions work together to massage incoming data and changes to existing data into the data shapes that our redux app state needs, so that state can be updated and trigger appropriate changes in the UI.  
+
+The util functions are imported into the saga files for use from their `_utils.ts` . The sagas pass parts of the action payload and/or current app state into the util functions, which then do their work, and return a value to the saga function.
+
+<hr>
 
 <sub><a name="sagas-actions">sagas -> actions</a></sub>  
 
@@ -387,19 +401,11 @@ export function* sagaFunc(action: ActionNameAction): {} {
 
 ![Store, UI Components, UI As A Whole](https://static.swimlanes.io/a92eb3d0100848b0d732c51aceab2a42.png)
 
-```
-Title: Store, UI Components, UI As A Whole
+1. [store -> components](#store-components): components are as presentational as possible  
+2. [components -> ui](#components-ui): the components make up the ui, also as presentational as possible, maintaining minimal ui state  
+3. [ui -> ui utils](#ui-ui-utils): sorting and filtering based on actual user interaction is handled in ui utils  
 
-store -> components: components are as presentational as possible
-components -> ui: the components make up the ui, also as presentational as possible, maintaining minimal ui state
-ui -> ui utils: sorting and filtering based on actual user interaction is handled in ui utils
-```
-
-```typescript
-// client.ts or web/api.ts
-
-
-```
+<sub><a name="store-components">store -> components</a></sub>  
 
 ```typescript
 
@@ -433,5 +439,18 @@ export const store = createStore(
 )
 
 sagaMiddleware.run(Sagas.root)
+
+```
+
+## TODO components-ui
+- code example, is this possible? or JUST a summary of scenes and components
+  
+## TODO ui -> ui utils
+- code example
+- summary
+
+```typescript
+// client.ts and/or web/api.ts
+// TODO
 
 ```
