@@ -49,8 +49,6 @@ class Sidebar extends React.Component {
             <Links data={author} />
             <p className="sidebar__copyright">
               {copyright}
-              <br />
-              <sub>Favicon: Yerba Mate by Francielly Costa Senra</sub>
             </p>
           </div>
         </div>

@@ -8,9 +8,7 @@ path: "/now"
 
 ## Rust
 
-Rust keeps coming up on my radar lately, so I've been reading through [_The Book_][the_book] and seeing what all the rage is.
-
-[the_book]: (https://doc.rust-lang.org/stable/book/2018-edition/foreword.html)
+Rust keeps coming up on my radar lately, so I've been reading through [_The Book_](https://doc.rust-lang.org/stable/book/2018-edition/foreword.html) and seeing what all the rage is.
 
 I've seen Rust often compared to Go in many respects and I thought I'd take a good long look at it.
 
@@ -18,4 +16,4 @@ I've found that learning two similar and/or related things within the same gener
 
 After playing with both, I think that I will come away with two things: (1) a deeper understanding of each thanks in part to the other, and (2) a favorite for me to run with.
 
-On to Chapter 4!
+On to [Chapter 5.2](https://doc.rust-lang.org/book/2018-edition/ch05-02-example-structs.html)!
