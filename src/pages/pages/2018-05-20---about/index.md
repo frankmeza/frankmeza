@@ -6,17 +6,17 @@ path: "/about"
 
 I think of my self as a good-natured smart-ass; nonchalant with a touch of rowdy.
 
-Just like you, I like stuff. *Imagine that!* Besides writing code, I'm into:
+Besides writing code, I'm into:
 
 - simplifying, organizing ideas, and decluttering stuff (all kinds of stuff)
+- positive, fun, enjoyable social interactions of all types
 - not taking myself too seriously
 - Brazilian [jiujitsu](http://www.eastsidegrappling.com/)
 - taking a deep breathe, taking in the moment, and [saying out loud](https://www.goodreads.com/quotes/3172-and-i-urge-you-to-please-notice-when-you-are), "Ahh, this is nice!"
 - spreading the gospel of [yerba mate](http://circleofdrink.com/adaptogenic-herbs-explained-reduce-stress-and-fight-disease) (check out the Yerba Mate favicon by Francielly Costa Senra)
 - taking care of and stretching my body/joints
-- dreaming of my next overseas voyage -> Lisboa, Portugal in September 2018
-- music from around the world
-- learning/speaking foreign languages (Spanish and Portuguese, and beginning a new one this autumn)
-- sunshine and warm weather
-- positive, fun, enjoyable social interactions of all types
+- dreaming of my next overseas voyage : a second visit to Portugal, most likely in 2019
+- learning/speaking foreign languages (Spanish and Portuguese, primarily)
 - different sorts of nerdy history stuff (I blame my college degree)
+- music from around the world
+- sunshine and warm weather
