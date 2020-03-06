@@ -89,6 +89,12 @@ Without further ado, _eu compartilho com vocês_:
 
 At the top of the page, hit it with `pagetop` to set down a `#top_of_page` anchor. It's super nice to be able to click a button to get up to the top to see the table of contents. You got one, right? It's just a regular numbered list, that's all, with links to the anchors that you set above the named section.  
 
+![table of contents](/.table_of_contents.png)
+
 When you start a new section, as named in the table of contents, you hit it with the `makelink` to put down the anchor for the section (that's linked from the TOC or otherwise), then a link back to the top as a nicety. Underneath that, you can put the `h2` or other element that you want to link to. I figure it's just nice to see the title a little bit down from the top, and also see a link back to the top. _Wow...! This writer thought of everything... :)_  
+
+![new section](./new_section.png)
+
+Pretty cool, huh?
 
 🤙 frank
