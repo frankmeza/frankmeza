@@ -23,7 +23,6 @@ module.exports = {
       name: 'Frank Meza',
       linkedin: 'frankmeza',
       telegram: 'frank_says_yeah',
-      twitter: 'frank_says_yeah',
       github: 'frankmeza'
     }
   },
