@@ -30,15 +30,17 @@ In the spirit of productive procrastination, I instead wrote some markdown snipp
 
 `(TRAY MENU, TOP LEFT) Code > Preferences > User Snippets > markdown.json`
 
-#### or with Help
+#### or with Help (snippets)
 
 ![find snippets](./find_snippets.png)
 
-![find markdown.json](.find_markdown.png)
+#### Find markdown.json
 
-Without further ado, _eu compartilho com vocês_:  
+![find markdown.json](./find_markdown.png)
 
-```jsonc
+Without further ado, _eu compartilho com vocês os shortcuts_:  
+
+```json
 {
     // Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and
     // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
@@ -53,6 +55,7 @@ Without further ado, _eu compartilho com vocês_:
     // 	],
     // 	"description": "Log output to console"
     // },
+    
     "page top anchor as subscript": {
         "prefix": "pagetop",
         "body": [
@@ -89,7 +92,7 @@ Without further ado, _eu compartilho com vocês_:
 
 At the top of the page, hit it with `pagetop` to set down a `#top_of_page` anchor. It's super nice to be able to click a button to get up to the top to see the table of contents. You got one, right? It's just a regular numbered list, that's all, with links to the anchors that you set above the named section.  
 
-![table of contents](/.table_of_contents.png)
+![table of contents](./table_of_contents.png)
 
 When you start a new section, as named in the table of contents, you hit it with the `makelink` to put down the anchor for the section (that's linked from the TOC or otherwise), then a link back to the top as a nicety. Underneath that, you can put the `h2` or other element that you want to link to. I figure it's just nice to see the title a little bit down from the top, and also see a link back to the top. _Wow...! This writer thought of everything... :)_  
 
