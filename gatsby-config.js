@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://frankmeza.github.io/',
     title: 'Frank says yeah!',
-    subtitle: 'React/React Native/Typescript Developer, Rust n00b, jiujitsu player, Lusophile',
+    subtitle: 'React/TS/JS Developer, Rust enthusiast, jiujitsu player, southern California native',
     copyright: '© MIT License',
     disqusShortname: '',
     menu: [
