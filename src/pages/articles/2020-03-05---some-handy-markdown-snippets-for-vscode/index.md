@@ -55,7 +55,7 @@ Without further ado, _eu compartilho com vocês os shortcuts_:
     // 	],
     // 	"description": "Log output to console"
     // },
-    
+
     "page top anchor as subscript": {
         "prefix": "pagetop",
         "body": [
@@ -70,7 +70,7 @@ Without further ado, _eu compartilho com vocês os shortcuts_:
         "description": "make subscript link to top of page"
     },
     "make links": {
-        "prefix": "makelink",
+        "prefix": "anchorlink",
         "body": [
             "<sub><a name=\"REPLACE_ME\">$1</a></sub>",
             "  ",
