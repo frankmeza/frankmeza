@@ -45,7 +45,6 @@ export const pageQuery = graphql`
         author {
           name
           telegram
-          twitter
           github
         }
       }
