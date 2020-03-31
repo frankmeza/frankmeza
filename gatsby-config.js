@@ -17,7 +17,12 @@ module.exports = {
       {
         label: 'Now',
         path: '/now/'
+      },
+      {
+        label: 'TIL: Today I Learned',
+        path: '/til/'
       }
+
     ],
     author: {
       name: 'Frank Meza',
