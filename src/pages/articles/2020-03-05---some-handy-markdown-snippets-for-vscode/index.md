@@ -9,7 +9,7 @@ tags:
   - "markdown"
   - "writing"
   - "snippets"
-description: "add a few snippets to your user settings, and bring up your README game"
+description: "Add a few snippets to your user settings, and up your README game."
 ---
 
 I've been working on this [little personal project](https://github.com/frankmeza/tap_list) and [git files](https://github.com/frankmeza/tap_list.git) to explore some new tech and have something to show for it, so I started a monorepo using:

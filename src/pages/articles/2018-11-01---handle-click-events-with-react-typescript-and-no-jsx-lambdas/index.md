@@ -52,11 +52,12 @@ Here is the crux of the solution:
 
 // func :: React.MouseEvent<HTMLElement> -> () => void
 public setTextInParentState = (
-    event: React.MouseEvent<HTMLElement>,
+  event: React.MouseEvent<HTMLElement>,
 ): (() => void) => {
-    const { innerText } = event.currentTarget
-    this.setState({ text: innerText })
-    return () => null
+  const { innerText } = event.currentTarget;
+  this.setState({ text: innerText });
+
+  return () => null;
 }
 
 // passed into grand/child as props, with this signature:

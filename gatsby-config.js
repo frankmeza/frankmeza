@@ -2,51 +2,50 @@ module.exports = {
   siteMetadata: {
     url: 'https://frankmeza.github.io/',
     title: 'Frank says yeah!',
-    subtitle: 'React/TS/JS Developer, Rust enthusiast, jiujitsu player, southern California native',
+    subtitle: 'React TS Developer, Rust enthusiast, jiujitsu player, southern California native',
     copyright: '© MIT License',
     disqusShortname: '',
     menu: [
       {
         label: 'Articles',
-        path: '/'
+        path: '/',
       },
       {
         label: 'About me',
-        path: '/about/'
+        path: '/about/',
       },
       {
         label: 'Now',
-        path: '/now/'
+        path: '/now/',
       },
-      {
-        label: 'TIL: Today I Learned',
-        path: '/til/'
-      }
-
+    //   {
+    //     label: 'TIL: Today I Learned',
+    //     path: '/til/',
+    //   },
     ],
     author: {
       name: 'Frank Meza',
       linkedin: 'frankmeza',
       telegram: 'frank_says_yeah',
-      github: 'frankmeza'
-    }
+      github: 'frankmeza',
+    },
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
+        name: 'pages',
+      },
     },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
           'Roboto: 300,400,400i,700',
-          'Source Sans Pro:300,400,400i,700' // you can also specify font weights and styles
-        ]
-      }
+          'Source Sans Pro:300,400,400i,700', // you can also specify font weights and styles
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-favicon',
@@ -62,9 +61,9 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false
-        }
-      }
+          windows: false,
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-feed',
@@ -82,16 +81,15 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => (
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.site_url + edge.node.fields.slug,
                   guid: site.siteMetadata.site_url + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
-                }))
-            ),
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                })),
             query: `
               {
                 allMarkdownRemark(
@@ -117,10 +115,10 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml'
-          }
-        ]
-      }
+            output: '/rss.xml',
+          },
+        ],
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -128,27 +126,27 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-images',
-            options: { maxWidth: 960 }
+            options: { maxWidth: 960 },
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
+            options: { wrapperStyle: 'margin-bottom: 1.0725rem' },
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants'
-        ]
-      }
+          'gatsby-remark-smartypants',
+        ],
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-73379983-2' }
+      options: { trackingId: 'UA-73379983-2' },
     },
     {
       resolve: 'gatsby-plugin-google-fonts',
-      options: { fonts: ['roboto:400,400i,500,700'] }
+      options: { fonts: ['roboto:400,400i,500,700'] },
     },
     {
       resolve: 'gatsby-plugin-sitemap',
@@ -178,14 +176,14 @@ module.exports = {
             return {
               url: site.siteMetadata.url + edge.node.path,
               changefreq: 'daily',
-              priority: 0.7
+              priority: 0.7,
             };
-          })
-      }
+          }),
+      },
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss-sass'
-  ]
+    'gatsby-plugin-postcss-sass',
+  ],
 };
