@@ -17,7 +17,7 @@ description: "A short circuit statement is like a shortened version of a ternary
 There you are writing code. You want to run a function if a certain condition is met. Otherwise, you want your application to do nothing else concerning that function right now. You immediately think of a ternary statement:
 
 ```javascript
-isConditionTrue ? myFunction() : null
+isConditionTrue ? myFunction() : null;
 ```
 
 Let's assume that you don't want to do anything with the `isConditionTrue` value other than checking that it's true. That `null` just doesn't feel right, does it? You're not going to touch it ever... there's just no need for it. What do you do?  
@@ -28,31 +28,31 @@ A short-circuit statement works like this: if the first value evaluates to `true
 
 ```javascript
 // if isConditionTrue is true, then execute myFunction
-isConditionTrue && myFunction()
+isConditionTrue && myFunction();
 ```
 
 What if you want to check if one of two conditions is true? Do this:
 
 ```javascript
-const isEitherConditionTrue = isConditionOneTrue || isConditionTwoTrue
+const isEitherConditionTrue = isConditionOneTrue || isConditionTwoTrue;
 
-isEitherConditionTrue && myFunction()
+isEitherConditionTrue && myFunction();
 ```
 
 Yes, you can also write it inline 
 
 ```javascript
-isConditionOneTrue || isConditionTwoTrue && myFunction()
+isConditionOneTrue || isConditionTwoTrue && myFunction();
 ```
 
-but I prefer to use *one* more line of code to make each line simpler to read. In the above block on first read, I'd be hard-pressed to remember if it needs parenthesis, for instance.  
+but I suggest not doing this, and instead using *one* more line of code to make each line simpler to read. An underlying idea that I suggest to go beyond is the one where "one-liners" and very terse compact code are more highly prized over simplicity and readability.    
 
 But now what if you want to check if BOTH conditions is true? I bet you can guess:
 
 ```javascript
-const areBothConditionsTrue = isConditionOneTrue && isConditionTwoTrue
+const areBothConditionsTrue = isConditionOneTrue && isConditionTwoTrue;
 
-areBothConditionsTrue && myFunction()
+areBothConditionsTrue && myFunction();
 ```
 
 Yes, these are simple examples. But they fit well with the short-circuit statement, which is also meant to be simple.  

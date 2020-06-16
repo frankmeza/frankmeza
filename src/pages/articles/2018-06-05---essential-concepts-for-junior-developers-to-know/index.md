@@ -3,7 +3,7 @@ title: Essential Concepts for Junior Developers to Know
 date: "2018-06-05T00:00:00.0Z"
 layout: post
 draft: false
-path: "/posts/essential-concepts-for-junior-developers-to-know/"
+path: "/posts/essential-concepts-for-junior-web-developers-to-know/"
 category: "web development"
 tags:
   - "web development"
@@ -21,9 +21,9 @@ You still have to show up on time, know what the interviewers are asking you, de
 
 But before all that, you have to know the material: the terminology, the work flows, the protocols, all that stuff.  
 
-Okay, so now how to prep? What to study? 
+Okay, so now how to prep? What to study?
 
-<hr>
+---
 
 ## Focus Beyond The Framework
 
@@ -37,7 +37,7 @@ What I mean by that is that armed with fundamental knowledge of programming and 
 
 How can you prove that you have a good, working knowledge of this? With clear explanations of the underlying mechanics, which can only come from having a solid grasp of basic concepts.  
 
-<hr>
+---
 
 ## What Are These Basic Concepts?
 
@@ -83,15 +83,28 @@ Mozilla on [HTTP Verbs][mozilla:http-verbs]
 
 True to form, here is a very high level overview here at [Wikipedia][wiki:http-status-codes] and the deeper read at [Mozilla][mozilla:http-status-codes].
 
-Status codes between 200-299 usually indicate a success of some kind. The most frequently seen are: `200` : SUCCESS, `201` : CREATED, `204` : NO_CONTENT.  
+Status codes between 200-299 usually indicate a success of some kind. The most frequently seen are: 
 
-Status codes between 300-399 are used to show some kind of redirection or moving of resources to another URL. I've not seen these too too much besides: `301` : MOVED_PERMANENTLY, `302` : FOUND.  
+- `200` : SUCCESS
+- `201` : CREATED
+- `204` : NO_CONTENT
 
-Status codes between 400-499 indicate some kind of CLIENT error response. There are many 4xx responses that come up in development, and they each have slightly different meanings and uses. Here is a list of the most common ones to be able to explain: `400` : BAD\_REQUEST, `401` : UNAUTHORIZED, `403` : FORBIDDEN, `404` : NOT\_FOUND, `418` : [I'm a teapot][mozilla:teapot] (LOL), `422` : UNPROCESSABLE\_ENTITY.  
+Status codes between 300-399 are used to show some kind of redirection or moving of resources to another URL. I've not seen these too too much besides: 
 
-Status codes between 500-599 indicate some kind of SERVER error response. Beyond 500 INTERNAL\_SERVER\_ERROR, these can be reviewed at a later time.
+- `301` : MOVED_PERMANENTLY 
+- `302` : FOUND  
 
-<hr>
+Status codes between 400-499 indicate some kind of CLIENT error response. There are many 4xx responses that come up in development, and they each have slightly different meanings and uses. Here is a list of the most common ones to be able to explain: 
+- `400` : BAD\_REQUEST 
+- `401` : UNAUTHORIZED 
+- `403` : FORBIDDEN 
+- `404` : NOT\_FOUND 
+- `418` : [I'm a teapot][mozilla:teapot] (LOL) 
+- `422` : UNPROCESSABLE\_ENTITY  
+
+Status codes between 500-599 indicate some kind of SERVER error response. Beyond `500` : INTERNAL\_SERVER\_ERROR, these can be reviewed at a later time.
+
+---
 
 ## Okay Now We Can Return to Code
 
@@ -123,7 +136,28 @@ This is what your interviewers are going to do anyway, but this sort of open sta
 
 ### What Is A Closure?
 
-Essentially a closure is this: imagine a function that lives inside another function. That's it. But [read this][medium:closure] for a much more detailed explanation. Pay attention most to the ideas of scope and work out for yourself who has access to what values and why.
+Essentially a closure is this: imagine a function `func2` that lives inside another function, `func1`. `func2` is inside of the same lexical scope as the other variables inside of `func1`, so `func2` can operate using values from inside of `func1` without having to pass them into the exclusive scope of `func2` That's it.  
+
+```javascript
+const func1 = () => {
+  const value1 = 1;
+  const value2 = 2;
+
+  // func2 has access to the same lexical scope as the 
+  // other variables inside of func1, value1 and value2
+  // without having to pass the values in as arguments
+
+  // THIS IS THE CLOSURE
+  const func2 = () => {
+    return value1 + value2;
+  }
+
+  // func2 called without args, but still has access to value1 and value2
+  func2(); 
+}
+```
+
+But [read this][medium:closure] for a much more detailed explanation. Pay attention most to the ideas of scope and work out for yourself who has access to what values and why.
 
 ### Call, Bind, Apply in JS
 
@@ -143,7 +177,9 @@ What are Javascript objects?
 
 ## Your Personal Projects
 
-Do you have a project to showcase? Awesome! This is great. You may be asked to diagram a certain operation flow of your project or explain more about large, underlying concepts instead of tiny implementation details. You may be asked questions about your project that you don't understand. This is fine, it's just your interviewers seeing how deep into the tech stack you were able to get into. If you understand part of the question, feel free to ask for more clarification. It may turn out that you actually *do* know the answer to the question (yay!), and that your initial confusion was related to terminology you are not familiar with just yet.   
+Do you have a project to showcase? Awesome! This is great. You may be asked to diagram a certain operation flow of your project or explain more about large, underlying concepts instead of tiny implementation details. You may be asked questions about your project that you don't understand. This is fine, it's just your interviewers seeing how deep into the tech stack you were able to get into.  
+
+If you understand part of the question, feel free to ask for more clarification. It may turn out that you actually *do* know the answer to the question (yay!), and that your initial confusion was related to terminology you are not familiar with just yet.   
 
 ### My Personal Experience Of Leveraging Fundamental Concepts Across Different Code Styles
 
@@ -153,7 +189,11 @@ However, I was able to take advantage of my experience and fairly solid understa
 
 ### The Big Scary Final Boss: The Whiteboard Session Algorithm
 
-There's a lot on the internet about nightmare algorithm questions in a job interview. If it does come up, it's my general impression (from personal experience) that it's less important to get an algorithm '100% right' than it is to thinking your way through it out loud to your interviewers, so that they can see how you think on your feet and under some slight pressure.  
+There's a lot on the internet about nightmare algorithm questions in a job interview. If it does come up, it's my general impression (from personal experience) that it's less important to get an algorithm '100% right' than it is to thinking your way through it out loud to your interviewers, so that they can see how you think on your feet and under some slight pressure. In other words, yes they want you to solve the problem correctly and yes, ideally with correct syntax so that your sandbox environment will print out the correct answer.  
+
+Let's say that you establish that you know how to approach problem-solving competently and are able to explain what you would like the code to do and how, and then translate that to comprehensible pseudo code, and let's say you run out of time alloted for the whiteboard section of the interview.  
+
+Your pseudo code and your explanation of what and how the final code is to work may be strong enough that getting the problem 100% correct is overlooked and you are still in the runnings as a valid candidate
 
 Software developers are problem solvers, essentially by definition. If you are hired after the interview, you will be paid for solving problems related to building software. Thus, I believe that it is fully acceptable to ask a job applicant to solve a problem in the interview. This part of the interview may happen, it may not. I've been in both scenarios. The main goal here is to demonstrate that you have the mental tools to handle a specific problem, so a very slight amount of glossing over the smaller details of actual implementation may be acceptable, as long as you sandwich this with very concrete and clear knowledge and explanation.  
 
@@ -175,7 +215,7 @@ Ideally, you will be perceived as competent and knowledgeable, and you may not e
 [codementor:this]: (https://www.codementor.io/dariogarciamoya/understanding--this--in-javascript-du1084lyn?icn=post-8i1jca6jp&ici=post-du1084lyn)
 
 
-[medium:closure]: (https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6)
+[medium:closure]: (https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
 
 [mozilla:authentication]: (https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
 [mozilla:rest]: (https://developer.mozilla.org/en-US/docs/Glossary/REST)
