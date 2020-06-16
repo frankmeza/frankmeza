@@ -62,9 +62,9 @@ public setTextInParentState = (
 
 // passed into grand/child as props, with this signature:
 export interface ChildProps {
-    readonly setTextInParentState: (
-        event: React.MouseEvent<HTMLElement>,
-    ) => () => void
+  readonly setTextInParentState: (
+    event: React.MouseEvent<HTMLElement>,
+  ) => () => void;
 }
 
 // passed into onClick at long last

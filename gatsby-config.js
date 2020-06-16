@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://frankmeza.github.io/',
     title: 'Frank says yeah!',
-    subtitle: 'React TS Developer, Rust enthusiast, jiujitsu player, southern California native',
+    subtitle: 'Typescript Developer - Node/React, Rust enthusiast, jiujitsu player, southern California native',
     copyright: '© MIT License',
     disqusShortname: '',
     menu: [
@@ -21,6 +21,10 @@ module.exports = {
     //   {
     //     label: 'TIL: Today I Learned',
     //     path: '/til/',
+    //   },
+    //   {
+    //     label: 'Debugging Journal',
+    //     path: '/debugging-journal/',
     //   },
     ],
     author: {
