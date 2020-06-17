@@ -75,7 +75,7 @@ Now let's say you decide to start experimenting with Rust references and come up
 
 ```rust
 struct Dinosaur {
-  location: &Earth,
+    location: &Earth,
     period: &Period,
     name: String,
 }
