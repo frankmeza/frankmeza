@@ -98,9 +98,9 @@ struct Period {
     age: String,
 }
 
-#[derive(Debug)]
 // instead of receiving the values `location` and `period`,
 // Dinosaur borrows (pre-existing) instances of Earth, Period
+#[derive(Debug)]
 struct Dinosaur<'a> {
     location: &'a Earth,
     period: &'a Period,
