@@ -7,6 +7,8 @@ class Post extends React.Component {
   render() {
     const { title, date, category, description } = this.props.data.node.frontmatter;
     const { slug, categorySlug } = this.props.data.node.fields;
+    const readPost = 'Read the full post';
+    const scrollEmoji = '📜 ';
 
     return (
       <div className="post">
@@ -25,7 +27,10 @@ class Post extends React.Component {
           <Link className="post__title-link" to={slug}>{title}</Link>
         </h2>
         <p className="post__description">{description}</p>
-        <Link className="post__readmore" to={slug}>Read</Link>
+        <Link className="post__readmore" to={slug}>
+          <span role="img" aria-label="a scroll emoji">{scrollEmoji}</span>
+          {readPost}
+        </Link>
       </div>
     );
   }
