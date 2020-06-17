@@ -33,22 +33,22 @@ struct Period {
 
 #[derive(Debug)]
 struct Dinosaur {
-  location: Earth,
+    location: Earth,
     period: Period,
     name: String,
 }
 
 fn main() {
-  let montana = Earth {
-    location: String::from("Montana"),
+    let montana = Earth {
+        location: String::from("Montana"),
     };
 
     let jurassic = Period {
-      age: String::from("Jurassic"),
+        age: String::from("Jurassic"),
     };
 
     let t_rex = Dinosaur {
-      name: String::from("Tyrannosaurus Rex"),
+        name: String::from("Tyrannosaurus Rex"),
         location: montana,
         period: jurassic,
     };
