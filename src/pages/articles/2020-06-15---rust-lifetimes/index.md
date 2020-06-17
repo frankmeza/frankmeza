@@ -23,12 +23,12 @@ Let's talk about when dinosaurs roamed the earth.
 ```rust
 #[derive(Debug)]
 struct Earth {
-  location: String,
+    location: String,
 }
 
 #[derive(Debug)]
 struct Period {
-  age: String,
+    age: String,
 }
 
 #[derive(Debug)]
