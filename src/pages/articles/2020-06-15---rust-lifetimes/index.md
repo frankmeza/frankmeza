@@ -81,9 +81,9 @@ struct Dinosaur {
 }
 ```
 
-### LIFETIME PARAMETER INFORMED CASE, COMPILER APPROVED ✅
-
 But even before running any business logic between the structs, the compiler already wants to know more, it wants explicit lifetime parameters on `Dinosaur`, so you dig around and put this together:
+
+### LIFETIME PARAMETER INFORMED CASE, COMPILER APPROVED ✅
 
 [this lifetime snippet in a Rust sandbox][rust-sandbox:with-lifetime-a]
 
